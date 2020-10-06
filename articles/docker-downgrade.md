@@ -3,7 +3,7 @@ title: "Docker for Mac がバージョンアップ後に不安定な場合"
 emoji: "🐳"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Docker]
-published: false
+published: true
 ---
 
 Docker for Mac を 2.4.0.0 にアップグレードしたところ、急にコンテナが不安定になりました。
