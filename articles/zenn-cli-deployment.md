@@ -3,7 +3,7 @@ title: "Zenn CLI を利用して記事を公開する"
 emoji: "🐥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [zenn]
-published: false
+published: true
 ---
 
 [Zenn公式](https://zenn.dev/zenn)アカウントから公式の記事が公開されており、十分な内容となってしますが、次の目的で記事として残しておきます。
