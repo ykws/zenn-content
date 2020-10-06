@@ -3,7 +3,7 @@ title: "タスクに賞味期限を設定する"
 emoji: "🍚"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [TiDD]
-published: false
+published: true
 ---
 
 プロジェクトマネジメントをチケットベースでタスク管理しようとするとゾンビチケットの問題が発生することがあります。
