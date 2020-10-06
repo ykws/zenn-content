@@ -30,6 +30,12 @@ published: false
 5. Zenn CLI で記事を作成
 6. GitHub リポジトリを更新
 
+## Zenn コンテンツ管理リポジトリ
+自分の場合は次のリポジトリで Zenn コンテンツを管理するようにしてみました。
+
+[zenn-content](https://github.com/ykws/zenn-content)
+
+
 # 参考記事
 詳細は公式アカウントの次の記事を順に読むのが良いです。
 
