@@ -12,7 +12,7 @@ Docker for Mac を 2.4.0.0 にアップグレードしたところ、急にコ�
 
 https://docs.docker.com/docker-for-mac/release-notes/
 
-なお、 Edge version 2.4.1.0 も試しましたが、同様でした。
+なお、 Edge version 2.4.1.0 も試しましたが、同様に不安定でした。
 
 macOS 10.15.6 で発生を確認しており、 10.15.7 では発生しない可能性もあります。
 
