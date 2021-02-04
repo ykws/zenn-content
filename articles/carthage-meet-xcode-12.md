@@ -8,6 +8,8 @@ published: false
 
 [Carthage 0.37.0](https://github.com/Carthage/Carthage/releases/tag/0.37.0) では Xcode12 向けに XCFramework をビルド可能です。
 
+# Xcode12 で Carthage を利用するには
+
 既存のプロジェクトに対して以下のコマンドを実行します。
 
 ```
