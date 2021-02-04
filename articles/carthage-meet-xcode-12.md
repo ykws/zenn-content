@@ -1,5 +1,5 @@
 ---
-title: "Carthage Xcode12 との出会い"
+title: "Xcode12 で Carthage を利用する"
 emoji: "🔨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Xcode,Carthage,Realm]
