@@ -22,7 +22,8 @@ $ carthage update --platform ios --use-xcframeworks
 
 realm-cocoa v10.5.1 に対して `--use-xcframeworks` のオプションを指定しても XCFramework が生成されません。
 
-関連 [Issue](https://github.com/realm/realm-cocoa/issues/7031) があり、 [v10.2.0](https://github.com/realm/realm-cocoa/releases/tag/v10.2.0) から XCFramework に対応はしているとのことだが、生成できていません。
+- [関連 Issue](https://github.com/realm/realm-cocoa/issues/7031)
+
+[v10.2.0](https://github.com/realm/realm-cocoa/releases/tag/v10.2.0) から XCFramework に対応しているとのことですが、生成できていません。
 
 Carthage のビルド自体は成功し、今まで通り `*.framework` が生成されるので、特に設定は変更せずにそのまま Xcode12 でビルドできます。
-
