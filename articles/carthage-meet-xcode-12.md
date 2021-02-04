@@ -27,3 +27,8 @@ realm-cocoa v10.5.1 に対して `--use-xcframeworks` のオプションを指�
 [v10.2.0](https://github.com/realm/realm-cocoa/releases/tag/v10.2.0) から XCFramework に対応しているとのことですが、生成できていません。
 
 Carthage のビルド自体は成功し、今まで通り `*.framework` が生成されるので、特に設定は変更せずにそのまま Xcode12 でビルドできます。
+
+## Carthage が Xcode12 に対して抱えていた問題と XCFramework について深く知る
+
+* [[日本語訳] Carthage issues, Xcode 12, XCFrameworks, Apple Silicon, etc.](https://zeero.medium.com/%E6%97%A5%E6%9C%AC%E8%AA%9E%E8%A8%B3-carthage-issues-xcode-12-xcframeworks-apple-silicon-etc-fa1932769ad3)
+* [[原文] Carthage issues, Xcode 12, XCFrameworks, Apple Silicon, etc.](https://medium.com/@quentinfasquel/carthage-issues-xcode-12-xcframeworks-apple-silicon-etc-1c60d8635dbc)
