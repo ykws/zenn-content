@@ -15,11 +15,11 @@ published: true
 
 | Name | Version |
 | ---- | ------- |
-| zenn-cli | v0.1.43 |
-| macOS | 10.15.6 |
-| node | v14.13.0 |
-| npm/npx | 6.14.8 |
-| n | 6.7.0 |
+| zenn-cli | v0.1.72 |
+| macOS | 11.2 |
+| node | v15.8.0 |
+| npm/npx | 7.5.2 |
+| n | 7.0.1 |
 
 # 手順
 
