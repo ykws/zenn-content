@@ -3,7 +3,7 @@ title: "Bitrise では Carthage 0.37.0 をサポートしていません"
 emoji: "🔨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [iOS,Xcode,Carthage,Bitrise]
-published: false
+published: true
 ---
 
 [前の記事](https://zenn.dev/ykws/articles/carthage-meet-xcode-12)で Carthage 0.37.0 では Xcode12 向けに XCFramework をビルド可能と書きましたが、現段階の Bitrise では **0.36.0** が最新としてバンドルされているため、 XCFramework が利用できませんでした。
