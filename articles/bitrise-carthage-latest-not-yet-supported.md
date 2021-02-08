@@ -20,10 +20,10 @@ Bitrise Script で `brew update && brew upgrade carthage` が有効なことも�
 
 https://twitter.com/_mono/status/1050256628371488768
 
-よって、 Bitrise で Carthage を利用するには Workaround を利用した対応が必要になります。
+よって、 Bitrise で Carthage を利用するには既知の通り Workaround を利用した対応が必要になります。
 
 https://github.com/Carthage/Carthage/blob/master/Documentation/Xcode12Workaround.md
 
-具体的な設定は次の記事がわかりやすいです。
+具体的な Bitrise の設定は次の記事がわかりやすいです。
 
 https://zenn.dev/tihimsm/articles/d2e85982f8e9114e0814
