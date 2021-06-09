@@ -3,7 +3,7 @@ title: "Xcode 13 で Vim mode を有効にする"
 emoji: "🔨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["xcode", "vim"]
-published: false
+published: true
 ---
 
 # Xcode13 で Vim mode が導入されました
