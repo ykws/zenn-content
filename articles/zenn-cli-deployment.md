@@ -15,8 +15,8 @@ published: true
 
 | Name | Version |
 | ---- | ------- |
-| zenn-cli | v0.1.72 |
-| macOS | 11.2 |
+| zenn-cli | v0.1.85 |
+| macOS | 11.4 |
 | node | v15.8.0 |
 | npm/npx | 7.5.6 |
 | n | 7.0.1 |
@@ -33,7 +33,7 @@ published: true
 ## Zenn コンテンツ管理リポジトリ
 自分の場合は次のリポジトリで Zenn コンテンツを管理するようにしてみました。
 
-[zenn-content](https://github.com/ykws/zenn-content)
+[ykws/zenn-content](https://github.com/ykws/zenn-content)
 
 
 # 参考記事
