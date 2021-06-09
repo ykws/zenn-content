@@ -12,6 +12,12 @@ published: true
 > Vim mode
 Many common key combinations and editing modes familiar to Vim users are supported directly within the code editor, using the new bottom bar to show mode indicators.
 
+[Xcode 13 Beta Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13-beta-release-notes)
+
+> Xcode 13 beta requires a Mac running macOS 11.3 or later.
+
+なお、 Xcode13 を動かすには macOS 11.3 以上でよく、 [Monterey](https://developer.apple.com/macos/) にする必要はありません。
+
 # 有効にするには
 [Xcode 13 Beta Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13-beta-release-notes)
 
