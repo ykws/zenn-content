@@ -28,8 +28,8 @@ warning: The iOS Simulator deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set
 2021-08-19 02:43:34.082 xcodebuild[1100:7908] [MT] IDETestOperationsObserverDebug: (667C8420-783E-4D3A-A7DC-1E9B75CF9790) Finished requesting crash reports. Continuing with testing.
 ```
 
-## ワークフローが成功しないとマージできないようにブランチを保護する
-[Branch Protection Rule](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule) から設定できます。
+## ブランチを保護する
+ワークフローが成功しないとマージできないように [Branch Protection Rule](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule) から設定できます。
 
 ![](https://storage.googleapis.com/zenn-user-upload/2e4fcf22070386d8a3d441b0.png)
 
@@ -37,11 +37,11 @@ warning: The iOS Simulator deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set
 
 ![](https://storage.googleapis.com/zenn-user-upload/65bb6352e8aec3d4ab934a5b.png)
 
-## ワークフローのステータスをREADMEに表示する
-README によく貼ってある「CI passing」のバッジは Actions からリンクを取得可能です。
+## ステータスをREADMEに表示する
+README によく貼ってある「CI passing」のバッジは Actions からマークダウンを取得可能なので、これをコピーして README にペーストすれば表示されるようになります。
 
 ![](https://storage.googleapis.com/zenn-user-upload/af0d9820becc3b072aa17e79.png)
-![](https://storage.googleapis.com/zenn-user-upload/51f57319b28c3439bd697d9e.png)
+![](https://storage.googleapis.com/zenn-user-upload/51f57319b28c3439bd697d9e.png =400x)
 
 # Example
 これらの動きを以下のリポジトリで検証しました。
@@ -59,7 +59,7 @@ https://github.com/ykws/XCTestExample/pull/2
 
 一応、この状態でも管理者権限であればマージすることは可能です。
 
-![](https://storage.googleapis.com/zenn-user-upload/b11d59d128dc6f06756bbdb8.png)
+![](https://storage.googleapis.com/zenn-user-upload/b11d59d128dc6f06756bbdb8.png =400x)
 
 ### ちゃんとテストを成功させる
 https://github.com/ykws/XCTestExample/pull/3
