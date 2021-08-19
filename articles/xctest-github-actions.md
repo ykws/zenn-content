@@ -47,8 +47,9 @@ README によく貼ってある「CI passing」のバッジは Actions からマ
 これらの動きを以下のリポジトリで検証しました。
 https://github.com/ykws/XCTestExample
 
-GitHub Actions は以下のワークフローとして実行させています。
-https://github.com/ykws/XCTestExample/actions/runs/1147283619/workflow
+## GitHub Actions
+ワークフローを動かすための設定ファイルは以下の部分です。
+https://github.com/ykws/XCTestExample/blob/main/.github/workflows/test.yml
 
 ## わざとテストを失敗させる
 https://github.com/ykws/XCTestExample/pull/2
@@ -61,7 +62,7 @@ https://github.com/ykws/XCTestExample/pull/2
 
 ![](https://storage.googleapis.com/zenn-user-upload/b11d59d128dc6f06756bbdb8.png =400x)
 
-### ちゃんとテストを成功させる
+## ちゃんとテストを成功させる
 https://github.com/ykws/XCTestExample/pull/3
 
 ワークフロー実行中はマージできないようになっています。
