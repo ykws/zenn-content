@@ -2,7 +2,7 @@
 title: "GitHub Actions で XCTest を実行する"
 emoji: "⚙️"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [ios,github-actions]
+topics: [ios,test,github-actions]
 published: false
 ---
 
