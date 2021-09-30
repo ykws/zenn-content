@@ -3,7 +3,7 @@ title: "レガシーな iOS アプリ開発の参考書籍"
 emoji: "📚"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [ios,objective-c,uikit,test]
-published: false
+published: true
 ---
 
 # 目的
