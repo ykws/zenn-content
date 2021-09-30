@@ -24,7 +24,7 @@ https://developer.apple.com/tutorials/app-dev-training/
 
 # 前提
 
-:::alert!
+:::message alert
 今回紹介する書籍は古いので、細かい部分は最新の情報と変わっている可能性が非常に高いです。
 :::
 
