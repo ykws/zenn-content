@@ -38,12 +38,12 @@ https://developer.apple.com/documentation/technologies?language=objc
 ## UIKit 
 https://book.impress.co.jp/books/1114101012
 
-この本が出た当時から iOS の UI に関する SDK の基本的な部分は大きく変わっていなくて、それらを UIKit と呼んでいるのですが、その基本的な概念が学べます。コードの例は Objective-C です。
+この本が出た当時から iOS の UI に関する SDK の基本的な部分は大きく変わっていなくて、それらを UIKit と呼んでいるのですが、その基本的な概念が学べます。
 
 ### iPhone SDK
 https://www.oreilly.co.jp/books/9784873114170/
 
-UIKit は iPhone SDK の一部で、 UIKit 以外の iPhone SDK の全体像を俯瞰できます。こちらもコードの例は Objective-C です。当時 Feature Phone では表現できなかった表現力を iPhone SDK がサードパーティに公開し、モバイルアプリの表現力が大きく変わりました。
+UIKit は iPhone SDK の一部で、 UIKit 以外の iPhone SDK の全体像を俯瞰できます。当時 Feature Phone では表現できなかった表現力を iPhone SDK がサードパーティに公開し、モバイルアプリの表現力が大きく変わりました。
 
 ## Objective-C
 https://www.sbcr.jp/product/4797368277/
@@ -53,7 +53,7 @@ Objective-C の言語仕様そのものについて学べます。 iOS アプリ
 ## XCTest
 https://www.shuwasystem.co.jp/book/9784798040899.html
 
-iOS アプリのテスト自動化について、 XCTest という仕組みが利用できます。 iOS アプリのテストは Xcode に紐づいている部分も大きく、古い書籍なので、 UI 操作に関しては参考にするのは難しいです。最新の Xcode ではできない部分も存在しますが、 XCTest の基本的な部分は大きく変わっていなくて、基本的な概念が学べます。コードの例は Objective-C です。
+iOS アプリのテスト自動化について、 XCTest という仕組みが利用できます。 iOS アプリのテストは Xcode に紐づいている部分も大きく、古い書籍なので、 UI 操作に関しては参考にするのは難しいです。最新の Xcode ではできない部分も存在しますが、 XCTest の基本的な部分は大きく変わっていなくて、基本的な概念が学べます。
 
 ## iPhone アプリ
 https://www.ohmsha.co.jp/book/9784873115023/
