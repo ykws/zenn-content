@@ -32,7 +32,7 @@ https://developer.apple.com/tutorials/app-dev-training/
 
 https://developer.apple.com/documentation/technologies?language=objc
 
-後述の紹介で繰り返し述べますが、細部は変わってはいても、基本的な概念に関しては変わっていないのでどれも参考になると判断しています。
+後述の紹介で繰り返し述べますが、細部は変わってはいても、基本的な概念に関しては変わっていなくて、かつ最新の書籍や記事では得られない Objective-C のコード例が充実しているのでどれも参考になると判断しています。
 
 # 書籍紹介
 ## UIKit 
@@ -54,11 +54,6 @@ Objective-C の言語仕様そのものについて学べます。 iOS アプリ
 https://www.shuwasystem.co.jp/book/9784798040899.html
 
 iOS アプリのテスト自動化について、 XCTest という仕組みが利用できます。 iOS アプリのテストは Xcode に紐づいている部分も大きく、古い書籍なので、 UI 操作に関しては参考にするのは難しいです。最新の Xcode ではできない部分も存在しますが、 XCTest の基本的な部分は大きく変わっていなくて、基本的な概念が学べます。コードの例は Objective-C です。
-
-### iOS テスト
-https://peaks.cc/books/iOS_testing
-
-前述の書籍は実践的な内容で、より抽象的な iOS テストについてわかりやすくまとまっています。比較的新しい書籍なので、コードの例は Swift です。
 
 ## iPhone アプリ
 https://www.ohmsha.co.jp/book/9784873115023/
