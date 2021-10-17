@@ -13,17 +13,21 @@ https://apps.apple.com/us/app/google-authenticator/id388497605
 https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2
 
 Google Authenticator for Android のオープンソース版があります。
+
+:::message alert
 2020年6月9日が最終更新日でアーカイブなっており、現在はメンテナンスされていません。
+:::
 
 https://github.com/google/google-authenticator-android
 
 今回はこのオープンソース版を試してみます。
-README に書いてある通りです。
+README に書いてある通りですが、備忘録として順に見ていきます。
 
 # 動作確認環境
 - Mac mini M1 2020
 - Android Studio Arctic Fox 2020.3.1 Pathc 3
 - Homebrew 3.2.16
+- Bazel 4.2.1-homebrew
 
 # 環境構築
 ## Android Studio
@@ -49,7 +53,10 @@ ANDROID_HOME として Android SDK のパスを通します。
 # ビルド
 Bazel を利用してビルドします。
 
+:::message
 注意すべきは `//` はよくあるコメントではなく、パラメータとしてターミナルに入力します。
+:::
+
 以下、 `//` 以下も含めて全て入力するのが正しいです。
 
 ```
