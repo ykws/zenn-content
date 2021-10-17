@@ -6,12 +6,10 @@ topics: [onetimepassword, android, bazel]
 published: false
 ---
 
+# はじめに
 二段階認証のパスコードに Google Authenticator を利用している人も多いと思います。
 
-## iOS
 https://apps.apple.com/us/app/google-authenticator/id388497605
-
-## Android
 https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2
 
 Google Authenticator for Android のオープンソース版があります。
@@ -20,23 +18,28 @@ Google Authenticator for Android のオープンソース版があります。
 https://github.com/google/google-authenticator-android
 
 今回はこのオープンソース版を試してみます。
-
 README に書いてある通りです。
+
+# 動作確認環境
+- Mac mini M1 2020
+- Android Studio Arctic Fox 2020.3.1 Pathc 3
+- Homebrew 3.2.16
 
 # 環境構築
 ## Android Studio
-Android Studio Arctic Fox 2020.3.1 Patch 3
+Download Android Studio ->  Mac with Apple chip から M1対応版をダウンロードできます。
 https://developer.android.com/studio
 
 ## Bazel
-bazel の M1 対応は済んでおり、 Homebrew 経由でインストールすると問題なく動かせます。
+M1対応済みを、 Homebrew 経由でインストールできます。
 https://docs.bazel.build/versions/main/install-os-x.html#install-on-mac-os-x-homebrew
 
 # ソースを取得 
-まずは GitHub からソースを取得します。
+GitHub からソースを取得します。
 
 # パスを通す
 ANDROID_HOME として Android SDK のパスを通します。
+以下のようにパスを認識していれば大丈夫です。
 
 ```
 % echo $ANDROID_HOME
@@ -44,7 +47,7 @@ ANDROID_HOME として Android SDK のパスを通します。
 ```
 
 # ビルド
-bazel を利用してビルドします。
+Bazel を利用してビルドします。
 
 注意すべきは `//` はよくあるコメントではなく、パラメータとしてターミナルに入力します。
 以下、 `//` 以下も含めて全て入力するのが正しいです。
