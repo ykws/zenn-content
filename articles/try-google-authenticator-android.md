@@ -21,7 +21,7 @@ Google Authenticator for Android のオープンソース版があります。
 https://github.com/google/google-authenticator-android
 
 今回はこのオープンソース版を試してみます。
-README に書いてある通りですが、備忘録として順に見ていきます。
+README に書いてある通りですが、順に見ていきます。
 
 # 動作確認環境
 - Mac mini M1 2020
@@ -38,6 +38,10 @@ https://developer.android.com/studio
 M1対応済みを、 Homebrew 経由でインストールできます。
 https://docs.bazel.build/versions/main/install-os-x.html#install-on-mac-os-x-homebrew
 
+:::message
+オープンソース版は Android Studio のプロジェクト形式ではないため、 Bazel が必須になっています。
+:::
+
 # ソースを取得 
 GitHub からソースを取得します。
 
@@ -50,8 +54,8 @@ ANDROID_HOME として Android SDK のパスを通します。
 /Users/ykws/Library/Android/sdk
 ```
 
-# ビルド
-Bazel を利用してビルドします。
+# 実機インストール
+Bazel を利用してビルドして、実機にインストールします。
 
 :::message
 注意すべきは `//` はよくあるコメントではなく、パラメータとしてターミナルに入力します。
