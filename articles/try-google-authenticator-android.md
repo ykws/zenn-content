@@ -1,6 +1,6 @@
 ---
 title: "GoogleAuthenticatorをソースからビルドしてみよう"
-emoji: "⛳"
+emoji: "🔨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [onetimepassword, android, bazel]
 published: false
@@ -72,5 +72,10 @@ Bazel を利用してビルドして、実機にインストールします。
 
 https://freeotp.github.io/qrcode.html
 
+バーコードをスキャンからカメラを起動し、サイトの QR コードを読み取るとアカウントが追加され、ワンタイムパスワードを生成できるようになります。
+
+![](https://storage.googleapis.com/zenn-user-upload/3164b7f895cfb84285dd97ee.png =250x)
+
+## 要確認
 桁数を 6桁から増やしても生成されるパスコードは 6桁のままなので、アプリ側でパラメータを調整可能になっていない可能性があります。
 
