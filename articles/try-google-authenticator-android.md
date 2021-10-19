@@ -21,6 +21,8 @@ Google Authenticator for Android のオープンソース版があります。
 https://github.com/google/google-authenticator-android
 
 今回はこのオープンソース版を試してみます。
+結論として、実機で動作確認までできましたが、問題があって未解決の状態です。
+
 README に書いてある通りですが、順に見ていきます。
 
 # 動作確認環境
@@ -76,6 +78,6 @@ https://freeotp.github.io/qrcode.html
 
 ![](https://storage.googleapis.com/zenn-user-upload/3164b7f895cfb84285dd97ee.png =250x)
 
-## 要確認
-桁数を 6桁から増やしても生成されるパスコードは 6桁のままなので、アプリ側でパラメータを調整可能になっていない可能性があります。
+# 問題
+サイト上で生成するパラメータ（桁数、SHA、Counter or Timeout）を変更しても、生成されるパスコードが全く同じなので、アプリ側でパラメータを調整可能になっていない可能性があります。
 
