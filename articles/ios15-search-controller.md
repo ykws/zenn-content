@@ -90,17 +90,22 @@ searchController.dimsBackgroundDuringPresentation = true
 
 いずれも推奨される書き方ではないですが、既存のコードで意図しない挙動をしていたら注目すべき点です。
 
-## OS標準では
+# 検証リポジトリ
+これを検証したソースコードのリポジトリです。
+
+[SearchExample](https://github.com/ykws/SearchExample)
+
+# OS標準では
 なお、OS標準のアドレス帳ではこのデフォルト値に従っていました。
 つまり、
 
-### iOS14
+## iOS14
 
 iOS14までは検索中にアドレス帳のコンテンツをタップできませんでしたが、
 
 ![](https://storage.googleapis.com/zenn-user-upload/76fdd50430bd-20211117.png =200x)
 
-### iOS15
+## iOS15
 
 iOS15以降、検索中にアドレス帳のコンテンツをタップできるようになっています。
 
@@ -113,9 +118,4 @@ iOS15以降、検索中にアドレス帳のコンテンツをタップできる
 ただ、標準の動作に適合していく方が今後の OS のアップデートに追従していくのが容易になる可能性も感じました。
 
 とはいえ、 OS ごとの挙動をアプリ内では統一したいという側面もあると思うので、その場合は、紹介した property を利用して制御することも可能になっています。
-
-# 検証リポジトリ
-これを検証したソースコードのリポジトリです。
-
-[SearchExample](https://github.com/ykws/SearchExample)
 
