@@ -39,7 +39,7 @@ iOS13から Deprecated です。
 - iOS14までは `true`
 - iOS15からは `false`
 
-## iOS15以降でコンテンツを隠したい
+## コンテンツを隠したい
 
 よって、iOS15以降で検索中に基になるコンテンツを**隠したい**場合
 
@@ -49,9 +49,9 @@ searchController.obscuresBackgroundDuringPresentation = true
 
 iOS15未満で隠したい場合は明示する必要はないです。
 
-## iOS15未満でコンテンツを隠したくない
+## コンテンツを隠したくない
 
-逆に iOS14未満で検索中に基になるコンテンツを**隠したくない**場合
+逆に iOS15未満で検索中に基になるコンテンツを**隠したくない**場合
 
 ```swift
 searchController.obscuresBackgroundDuringPresentation = false
