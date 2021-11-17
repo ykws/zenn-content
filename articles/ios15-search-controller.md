@@ -8,44 +8,50 @@ published: false
 
 # UISearchController でコンテンツを隠すとは
 
-iOSアプリで [UISearchController](https://developer.apple.com/documentation/uikit/uisearchcontroller) を利用している場合、検索中に基になるコンテンツを隠すかどうか変更できます。
+iOSアプリで [UISearchController](https://developer.apple.com/documentation/uikit/uisearchcontroller) を利用している場合、**検索中に基になるコンテンツを隠すかどうか**変更できます。
 
-このように検索中に下の TableView の Cell をタップできない状態を基になるコンテンツを隠すと表現しています。グレーでマスクされている部分をタップすると Cancel をタップした時と同じように検索中を解除します。
+このように検索中に下の TableView の Cell をタップできない状態を**基になるコンテンツを隠す**と表現しています。グレーでマスクされている部分をタップすると Cancel をタップした時と同じように検索中を解除します。
 
 ![](https://storage.googleapis.com/zenn-user-upload/3411bb30a106-20211117.png =200x)
 
-隠したい場合 iOS14まではデフォルトで隠す設定だったので、特に意識しないで済みました。
-これが iOS15以降ではデフォルトで隠さない設定に変わってしまったため、隠したい場合は明示的に隠す設定にする必要があります。
+隠したい場合 iOS14まではデフォルトで**隠す**設定だったので、特に意識しないで済みました。
+これが iOS15からデフォルトで**隠さない**設定に変わってしまったため、隠したい場合は明示的に隠す設定にする必要があります。
 
-iOS15以降では検索中グレーでマスクされなくなります。そのため、検索中に下の TableView の Cell をタップできる状態になっています。
+iOS15から検索中グレーでマスクされなくなります。そのため、検索中に下の TableView の Cell をタップできる状態になっています。
 
 ![](https://storage.googleapis.com/zenn-user-upload/be948a029c0b-20211117.png =200x)
 
-## コンテンツを隠すかどうかの property
+## コンテンツを隠す property
 
-### iOS13以降
+### iOS13から
 [obscuresBackgroundDuringPresentation](https://developer.apple.com/documentation/uikit/uisearchcontroller/1618656-obscuresbackgroundduringpresenta)
 
-### iOS13未満
+### iOS12まで
 
 :::message
-iOS13 以降では Deprecated です。
+iOS13から Deprecated です。
 :::
 
 [dimsBackgroundDuringPresentation](https://developer.apple.com/documentation/uikit/uisearchcontroller/1618660-dimsbackgroundduringpresentation)
 
----
+### デフォルト値
 
-- iOS15未満ではデフォルト `true`
-- iOS15以降はデフォルト `false`
+- iOS14までは `true`
+- iOS15からは `false`
 
-よって iOS15 以降で検索中に基になるコンテンツを**隠したい**場合は
+## iOS15以降でコンテンツを隠したい
+
+よって、iOS15以降で検索中に基になるコンテンツを**隠したい**場合
 
 ```swift
 searchController.obscuresBackgroundDuringPresentation = true
 ```
 
-逆に iOS14未満で検索中に基になるコンテンツを**隠したくない**場合は
+iOS15未満で隠したい場合は明示する必要はないです。
+
+## iOS15未満でコンテンツを隠したくない
+
+逆に iOS14未満で検索中に基になるコンテンツを**隠したくない**場合
 
 ```swift
 searchController.obscuresBackgroundDuringPresentation = false
@@ -61,9 +67,9 @@ if #available(iOS 13.0, *) {
 }
 ```
 
-iOS15以降で隠さない場合、iOS15未満で隠したい場合は明示する必要はないです。
+iOS15以降で隠さない場合、明示する必要はないです。
 
-### 同時に設定すると？
+## 同時に設定すると？
 
 Warning が表示されますが、 Deprecated なので、まだどちらの property も使用可能です。
 これを同時に利用するとどうなるかというと、現時点では、 `dimsBackgroundDuringPresentation` の設定が優先されます。
@@ -100,11 +106,15 @@ iOS15以降、検索中にアドレス帳のコンテンツをタップできる
 
 ![](https://storage.googleapis.com/zenn-user-upload/f05ec901c14d-20211117.png =200x)
 
+# まとめ
+
 ゆえに Apple の期待する UISearchController の利用方法としては、デフォルトの挙動に従うべきなのかもしれません。
 [Human Interface Guidelines - Search Bars](https://developer.apple.com/design/human-interface-guidelines/ios/bars/search-bars/) からはどのような振る舞いを期待しているかは読み取れませんでしたので、リジェクト対象になるとは考えにくいです。
 ただ、標準の動作に適合していく方が今後の OS のアップデートに追従していくのが容易になる可能性も感じました。
 
-## 検証リポジトリ
+とはいえ、 OS ごとの挙動をアプリ内では統一したいという側面もあると思うので、その場合は、紹介した property を利用して制御することも可能になっています。
+
+# 検証リポジトリ
 これを検証したソースコードのリポジトリです。
 
 [SearchExample](https://github.com/ykws/SearchExample)
