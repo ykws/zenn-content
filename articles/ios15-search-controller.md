@@ -93,7 +93,7 @@ searchController.dimsBackgroundDuringPresentation = true
 # 検証リポジトリ
 これを検証したソースコードのリポジトリです。
 
-[SearchExample](https://github.com/ykws/SearchExample)
+https://github.com/ykws/SearchExample
 
 # OS標準では
 なお、OS標準のアドレス帳ではこのデフォルト値に従っていました。
