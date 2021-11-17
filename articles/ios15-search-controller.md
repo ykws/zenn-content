@@ -3,7 +3,7 @@ title: "iOS15 で UISearchController を利用する時の注意点"
 emoji: "💡"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [ios, uisearchcontroller]
-published: false
+published: true
 ---
 
 # UISearchController でコンテンツを隠すとは
