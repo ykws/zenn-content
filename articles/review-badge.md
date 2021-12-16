@@ -14,15 +14,15 @@ Text Blaze の利用手順は上の記事で詳しく紹介されているので
 
 # 一覧
 
-| badge | 意味 | Text Blaze |
-|-------|------|------|
-| ![must-badge](https://img.shields.io/badge/review-must-red.svg) | 修正必須。この対応がされていないと Approve できない | `![must-badge](https://img.shields.io/badge/review-must-red.svg)` |
-| ![imo-badge](https://img.shields.io/badge/review-imo-orange.svg) | 修正任意。自分ならこうするけど、どう？ | `![imo-badge](https://img.shields.io/badge/review-imo-orange.svg)` |
-| ![nits-badge](https://img.shields.io/badge/review-nits-green.svg) | 修正任意。細かい指摘 | `![nits-badge](https://img.shields.io/badge/review-nits-green.svg)` |
-| ![next-badge](https://img.shields.io/badge/review-next-blueviolet) | 修正不要、今後の改善点 | `![next-badge](https://img.shields.io/badge/review-next-blueviolet)` |
-| ![ask-badge](https://img.shields.io/badge/review-ask-yellowgreen.svg) | 回答必須。確認 | `![ask-badge](https://img.shields.io/badge/review-ask-yellowgreen.svg)` |
-| ![memo-badge](https://img.shields.io/badge/review-memo-lightgrey) | 回答不要。コード理解・解説のためのメモ | `![memo-badge](https://img.shields.io/badge/review-memo-lightgrey)` |
-| ![good-badge](https://img.shields.io/badge/review-good-blightgreen.svg) | 良い点 | `![good-badge](https://img.shields.io/badge/review-good-blightgreen.svg)` |
+| badge | 期待するリアクション | 意味 | Text Blaze |
+|-------|------|------|------|
+| ![must-badge](https://img.shields.io/badge/review-must-red.svg) | 修正必須 | この対応がされていないと Approve できない | `![must-badge](https://img.shields.io/badge/review-must-red.svg)` |
+| ![imo-badge](https://img.shields.io/badge/review-imo-orange.svg) | 修正任意 | 自分ならこうするけど、どう？ | `![imo-badge](https://img.shields.io/badge/review-imo-orange.svg)` |
+| ![nits-badge](https://img.shields.io/badge/review-nits-green.svg) | 修正任意 | 細かい指摘 | `![nits-badge](https://img.shields.io/badge/review-nits-green.svg)` |
+| ![next-badge](https://img.shields.io/badge/review-next-blueviolet) | 修正不要 | 今後の改善点 | `![next-badge](https://img.shields.io/badge/review-next-blueviolet)` |
+| ![ask-badge](https://img.shields.io/badge/review-ask-yellowgreen.svg) | 回答必須 | 確認 | `![ask-badge](https://img.shields.io/badge/review-ask-yellowgreen.svg)` |
+| ![memo-badge](https://img.shields.io/badge/review-memo-lightgrey) | 回答不要 | コード理解・解説のためのメモ書き | `![memo-badge](https://img.shields.io/badge/review-memo-lightgrey)` |
+| ![good-badge](https://img.shields.io/badge/review-good-blightgreen.svg) | 読んで！ | 良い点 | `![good-badge](https://img.shields.io/badge/review-good-blightgreen.svg)` |
 
 # 解説
 ## suggestion を除外
