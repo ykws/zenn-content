@@ -47,3 +47,13 @@ https://github.com/yuriy-budiyev/lib-demo-app/blob/2e5faf841d04eb4c9580ae4bbd9b6
 
 https://github.com/ykws/code-scanner-example
 
+## 確認手順
+
+以下の QR コード生成サイトで FREE TEXT に `code-scanner-example` と入力します。
+https://www.the-qrcode-generator.com/
+
+生成された QR コードをスキャンした結果のスクリーンショットです。
+
+![](https://storage.googleapis.com/zenn-user-upload/010ca5afdc26-20220210.png =200x)
+
+
