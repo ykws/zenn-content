@@ -1,9 +1,9 @@
 ---
-title: "AndroidでQRコードスキャンを実装する"
+title: "Android で QR コードスキャンを実装する"
 emoji: "📷"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [android,camera,qr]
-published: false
+published: true 
 ---
 
 # はじめに
@@ -24,11 +24,16 @@ dependencies {
 
 変更前の URL を指定すると取得可能です。
 
-```build.gradle
+```diff
 dependencies {
-    implementation 'com.budiyev.android:code-scanner:2.1.0'
+-   implementation 'com.github.yuriy-budiyev:code-scanner:2.1.0'
++   implementation 'com.budiyev.android:code-scanner:2.1.0'
 }
 ```
+
+この変更は以下の Pull Request で直近発生していたのでまだ反映されていなくて、直に反映される解消される可能性があります。
+
+https://github.com/yuriy-budiyev/code-scanner/pull/140
 
 ## パーミッションの許可を求める
 
