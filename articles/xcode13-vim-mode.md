@@ -23,7 +23,7 @@ Editor > Vim Mode にチェックをつけます
 
 ![](https://storage.googleapis.com/zenn-user-upload/607c24684fc8-20220303.png)
 
-## Xcode13 Beta
+## Xcode13 Beta 2 まで
 [Xcode 13 Beta Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13-beta-release-notes)
 
 > Xcode 13 introduces Vim key bindings, emulating a vim experience in the source editor combined with the existing editor functionality. (3716281)
@@ -37,7 +37,7 @@ Preferences > Text Editing > Editing > Vim key bindings のチェックボック
 Editor 下に Vim の表示が！
 ![](https://storage.googleapis.com/zenn-user-upload/83cae8b6710b25d26a72e581.png)
 
-Preferences > Key Bindings にあると思って探して見つからなかったので、
+当時、 Preferences > Key Bindings にあると思って探して見つからなかったので、
 「Xcode13 には導入するけど、まだ対応したとは言っていない」
 Beta版だから未対応かと思ってしまいましたが、ちゃんと対応していました。
 
