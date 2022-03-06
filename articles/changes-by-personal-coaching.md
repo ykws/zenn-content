@@ -3,7 +3,7 @@ title: "パーソナルコーチングを通して起こった変化"
 emoji: "🌱"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [パーソナルコーチング]
-published: false
+published: true
 ---
 
 昨年の11月からパーソナルコーチングを開始して約4ヶ月、起こった変化の記録です。
