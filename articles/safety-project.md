@@ -3,7 +3,7 @@ title: "プロジェクトに浅瀬を作る"
 emoji: "🏖️"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [心理的安全]
-published: false
+published: true
 ---
 
 # はじめに
