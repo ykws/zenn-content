@@ -3,7 +3,7 @@ title: "Xcode13.3からのLicensePlist利用の注意点"
 emoji: "🔧"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [ios,license,xcode,spm]
-published: false
+published: true
 ---
 
 iOSアプリに利用しているライブラリのライセンス表記を実装するのに [LicensePlist](https://github.com/mono0926/LicensePlist) というライブラリが便利です。
