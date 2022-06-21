@@ -39,7 +39,7 @@ rename:
 
 ## 改善案
 
-各リポジトリの Package.swift の `Package(name:` に元の表記を確認でき、おそらく以前の Package.resolved もこの内容を出力していた推測します。 Package.resolved からは location によってリポジトリの URL がわかるので、そこから各リポジトリの Package.swift を走査すれば、元の表記を取得できそうです。
+各リポジトリの Package.swift の `Package(name:` に元の表記を確認でき、おそらく以前の Package.resolved もこの内容を出力していたと推測します。 Package.resolved からは location によってリポジトリの URL がわかるので、そこから各リポジトリの Package.swift を走査すれば、元の表記を取得できそうです。
 
 https://github.com/microsoft/appcenter-sdk-apple/blob/a52cb5001c94e86a04bee0ce8d9fc1a73ccf2985/Package.swift#L54
 
