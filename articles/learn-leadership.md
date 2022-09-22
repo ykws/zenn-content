@@ -4,6 +4,7 @@ emoji: "🐝"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: []
 published: true
+publication_name: "yumemi_inc"
 ---
 
 オライリー・ジャパンから「リーダーの作法」という翻訳の書籍が発売され、読んでみて真似していきたいことの紹介です。
