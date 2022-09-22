@@ -28,6 +28,10 @@ https://github.com/realm/realm-cocoa/issues/7031
 
 [v10.2.0](https://github.com/realm/realm-cocoa/releases/tag/v10.2.0) から XCFramework に対応しているとのことですが、生成できていません。
 
+どうも Carthage 側の問題のようなので Realm 側では Issue を close にしているコメントも見受けられました。
+
+https://github.com/realm/realm-swift/issues/7193#issuecomment-810029237
+
 Carthage のビルド自体は成功し、今まで通り `*.framework` が生成されるので、特に設定は変更せずにそのまま Xcode12 でビルドできます。
 
 ## Carthage が Xcode12 に対して抱えていた問題と XCFramework について深く知る
