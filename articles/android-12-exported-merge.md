@@ -29,19 +29,19 @@ xxx.yyy.zzz.AAA: Targeting S+ (version 31 and above) requires than an explicit v
 
 https://developer.android.com/about/versions/12/behavior-changes-12?hl=ja#exported
 
-さて、ここで変更可能なコードであれば上記に従って属性を明示的に宣言すれば良いですが、利用しているライブラリがソースコードを非公開にしている場合など、対応不可能だと思ってしまっていました。
+さて、ここで変更可能なコードであれば上記に従って属性を明示的に宣言すれば良いですが、利用しているライブラリがソースコードを非公開にしている場合などは、対応のしようがありません。
 
-こういった条件でも、複数のマニフェストファイルをマージする方法により対応が可能になっています。
+しかし、こういった条件でも、複数のマニフェストファイルをマージする方法を Google は提供しており、対応が可能になっています。
 
 > マージルールを XML 要素全体（指定マニフェスト要素内のすべての属性と、その要素のすべての子タグ）に適用するには、次の属性を使用します。
 >
-> `tools:node="merge"
+> `tools:node="merge"`
 > 
 > 競合がない場合、マージ競合ヒューリスティックに基づいて、このタグ内のすべての属性と、ネストされたすべての要素をマージします。これは、要素に対するデフォルトの動作です。
 
 https://developer.android.com/studio/build/manifest-merge?hl=ja#node_markers
 
-よって、今回の例として、 `xxx.yyy.zzz.AAA` ライブラリに対して以下のように変更することで Android12 に対応したものとして取り込むことが可能になります。
+よって、今回の例として、 `xxx.yyy.zzz.AAA` ライブラリに対して以下のように指定することで exported 属性を付与した状態でマージしてくれるため Android12 に対応したものとして取り込むことが可能になります。この変更により Andorid12 以降のデバイスにインストール起動できることを確認できました。
 
 ```
 <service
@@ -50,7 +50,6 @@ https://developer.android.com/studio/build/manifest-merge?hl=ja#node_markers
   tools:node="merge" />
 ```
 
-exported を true にするか false にするかは、 **アプリ コンポーネントに LAUNCHER カテゴリが含まれている** かどうかで判断します。
+なお、 exported を true にするか false にするかは、 **アプリ コンポーネントに LAUNCHER カテゴリが含まれている** かどうかで判断します。
 
 > アプリ コンポーネントに LAUNCHER カテゴリが含まれている場合は、android:exported を true に設定します。他のほとんどの場合は、android:exported を false に設定します。
-
