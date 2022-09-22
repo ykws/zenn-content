@@ -3,7 +3,7 @@ title: "Android12未対応のライブラリを取り込む"
 emoji: "🍧"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [android,android12]
-published: false
+published: true
 ---
 
 2022年の11月より Android アプリを更新する際は Android 12 対応が必須になります。
