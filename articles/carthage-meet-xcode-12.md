@@ -4,6 +4,7 @@ emoji: "🔨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [iOS,Xcode,Carthage,Realm]
 published: true
+publication_name: yumemi_inc
 ---
 
 [Carthage 0.37.0](https://github.com/Carthage/Carthage/releases/tag/0.37.0) では Xcode12 向けに XCFramework をビルド可能です。
