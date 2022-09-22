@@ -4,6 +4,7 @@ emoji: "🍧"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [android,android12]
 published: true
+publication_name: yumemi_inc
 ---
 
 2022年の11月より Android アプリを更新する際は Android 12 対応が必須になります。
