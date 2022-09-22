@@ -4,6 +4,7 @@ emoji: "🔨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [iOS,Xcode,Carthage,Bitrise]
 published: true
+publication_name: yumemi_inc
 ---
 
 [前の記事](https://zenn.dev/ykws/articles/carthage-meet-xcode-12)で Carthage 0.37.0 では Xcode12 向けに XCFramework をビルド可能と書きましたが、当時の Bitrise では **0.36.0** が最新としてバンドルされているため、しばらくの間 XCFramework が利用できませんでした。
