@@ -24,7 +24,7 @@ $ carthage bootstrap --platform ios --use-xcframeworks
 
 realm-cocoa v10.5.1 に対して `--use-xcframeworks` のオプションを指定しても XCFramework が生成されません。
 
-- [関連 Issue](https://github.com/realm/realm-cocoa/issues/7031)
+https://github.com/realm/realm-cocoa/issues/7031
 
 [v10.2.0](https://github.com/realm/realm-cocoa/releases/tag/v10.2.0) から XCFramework に対応しているとのことですが、生成できていません。
 
