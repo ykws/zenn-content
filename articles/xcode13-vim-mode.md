@@ -4,6 +4,7 @@ emoji: "🔨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["xcode", "vim"]
 published: true
+publication_name: yumemi_inc
 ---
 
 # Xcode13 で Vim mode が導入されました
