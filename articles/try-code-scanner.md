@@ -3,7 +3,8 @@ title: "Android で QR コードスキャンを実装する"
 emoji: "📷"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [android,camera,qr]
-published: true 
+published: true
+
 ---
 
 # はじめに
