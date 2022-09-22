@@ -8,7 +8,11 @@ published: true
 
 iOSアプリに利用しているライブラリのライセンス表記を実装するのに [LicensePlist](https://github.com/mono0926/LicensePlist) というライブラリが便利です。
 
-しかし、Xcode 13.3 から SPM 連携のライブラリのライセンス表記に利用する際には注意する必要があります。
+執筆当時 Xcode 13.3 から SPM 連携のライブラリのライセンス表記に利用する際には注意する必要がありました。
+
+LicensePlist 3.22.2 以降では改善されており、それ以前のバージョンを利用して以下に記載の事象が発生している場合は、 LicensePlist をアップデートとすることで解消されます。
+
+以降は、 LicensePlist 3.22.2 以前を利用しなければならない環境において参考になればと思い残しておきます。（あまりないとは思いますが）
 
 # それ以前との違い
 
@@ -43,3 +47,8 @@ rename:
 
 https://github.com/microsoft/appcenter-sdk-apple/blob/a52cb5001c94e86a04bee0ce8d9fc1a73ccf2985/Package.swift#L54
 
+こちらのコメントをきっかけにして頂き、 3.22.2 では改善が行われました。
+
+https://github.com/mono0926/LicensePlist/pull/192
+
+bennokress さんに感謝！
