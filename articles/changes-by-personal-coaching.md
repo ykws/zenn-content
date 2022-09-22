@@ -4,6 +4,7 @@ emoji: "🌱"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [パーソナルコーチング]
 published: true
+publication_name: yumemi_inc
 ---
 
 昨年の11月からパーソナルコーチングを開始して約4ヶ月、起こった変化の記録です。
