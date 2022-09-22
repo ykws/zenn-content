@@ -4,6 +4,7 @@ emoji: "⚙️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [ios,test,github-actions]
 published: true
+publication_name: yumemi_inc
 ---
 
 # GitHub Actions で XCTest を実行してみる
