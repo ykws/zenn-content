@@ -4,6 +4,7 @@ emoji: "✍"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [記録習慣]
 published: true
+publication_name: yumemi_inc
 ---
 
 # はじめに
