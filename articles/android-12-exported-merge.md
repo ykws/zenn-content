@@ -21,7 +21,7 @@ The application could not be installed: INSTALL_PARSE_FAILED_MANIFEST_MALFORMED
 xxx.yyy.zzz.AAA: Targeting S+ (version 31 and above) requires than an explicit value for android:exported be defined when intent filters are present
 ```
 
-エラーの内容が非常に丁寧で何が起きているのか理解しやすいです。上の例では、 `xxx.yyy.zzz.AAA` が exported 属性が付与されていないと教えてくれています。
+エラーの内容が非常に丁寧で何が起きているのか理解しやすいです。上の例では、 `xxx.yyy.zzz.AAA` が `exported` 属性が付与されていないと教えてくれています。
 
 対応内容についてはドキュメントにも明記されている通りです。
 
@@ -41,7 +41,7 @@ https://developer.android.com/about/versions/12/behavior-changes-12?hl=ja#export
 
 https://developer.android.com/studio/build/manifest-merge?hl=ja#node_markers
 
-よって、今回の例として、 `xxx.yyy.zzz.AAA` ライブラリに対して以下のように指定することで exported 属性を付与した状態でマージしてくれるため Android12 に対応したものとして取り込むことが可能になります。この変更により Andorid12 以降のデバイスにインストール起動できることを確認できました。
+よって、今回の例として、 `xxx.yyy.zzz.AAA` ライブラリに対して以下のように指定することで `exported` 属性を付与した状態でマージしてくれるため Android12 に対応したものとして取り込むことが可能になります。この変更により Andorid12 以降のデバイスにインストール起動できることを確認できました。
 
 ```
 <service
@@ -50,6 +50,6 @@ https://developer.android.com/studio/build/manifest-merge?hl=ja#node_markers
   tools:node="merge" />
 ```
 
-なお、 exported を true にするか false にするかは、 **アプリ コンポーネントに LAUNCHER カテゴリが含まれている** かどうかで判断します。
+なお、 `exported` を `true` にするか `false` にするかは、 **アプリ コンポーネントに `LAUNCHER` カテゴリが含まれている** かどうかで判断します。
 
-> アプリ コンポーネントに LAUNCHER カテゴリが含まれている場合は、android:exported を true に設定します。他のほとんどの場合は、android:exported を false に設定します。
+> アプリ コンポーネントに `LAUNCHER` カテゴリが含まれている場合は、`android:exported` を `true` に設定します。他のほとんどの場合は、`android:exported` を `false` に設定します。
