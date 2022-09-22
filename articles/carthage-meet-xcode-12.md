@@ -13,7 +13,7 @@ published: true
 既存のプロジェクトに対して以下のコマンドを実行します。
 
 ```
-$ carthage update --platform ios --use-xcframeworks
+$ carthage bootstrap --platform ios --use-xcframeworks
 ```
 
 1. `Carthage/Build` に `*.xcframework` が生成されます。
