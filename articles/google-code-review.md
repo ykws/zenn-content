@@ -3,7 +3,7 @@ title: "Googleのソフトウェアエンジニアリングから学ぶコード
 emoji: "🦩"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [コードレビュー]
-published: false
+published: true
 ---
 
 オライリー・ジャパンから「Googleのソフトウェアエンジニアリング」という翻訳の書籍が発売され、その中からコードレビューに関する箇所を読んで学んだことの紹介です。
