@@ -4,6 +4,7 @@ emoji: "🦩"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [コードレビュー]
 published: true
+pulication_name: yumemi_inc
 ---
 
 オライリー・ジャパンから「Googleのソフトウェアエンジニアリング」という翻訳の書籍が発売され、その中からコードレビューに関する箇所を読んで学んだことの紹介です。
