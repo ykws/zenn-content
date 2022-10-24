@@ -11,6 +11,22 @@ publication_name: yumemi_inc
 
 https://www.oreilly.co.jp/books/9784873119656/
 
+:::details サブタイトルの持続可能という表現が良い
+この本のサブタイトルは「持続可能なプログラミングを支える技術、文化、プロセス」です。
+この持続可能（sustainable）の部分がとても響くものがあって、持続可能とするためにはどうしたら良いだろうか？　これを根源的な欲求として持ち、コードとコードレビューに向き合うのが本書では語られています。
+
+実は、原著のサブタイトルは「Lessons Learned from Programming Over Time」で、
+持続可能という直接的な表現はありません。 Over Time が刻を超越して、転じて持続していく様子につながると感じます。
+
+持続可能の表現は、本文序文に __sustainable__ として登場します。
+
+> What practices can we introduce to our code to make it sustainable—able to react to necessary change—over its life cycle, from conception to introduction to maintenance to deprecation?
+
+日本語訳は次の通りです。
+
+> 自分たちのコードを、着想し、導入し、保守し、廃止するまでのライフサイクルを通じて持続可能（sustainable）なものとするためにコードに導入できるのは、どんなプラクティスだろう？
+:::
+
 # はじめに
 
 発売当初に購入して、コードレビューの章にかなり影響を受け、この1年近く、取り込めそうなものは意識して取り込み、コードレビューを行なってきました。
