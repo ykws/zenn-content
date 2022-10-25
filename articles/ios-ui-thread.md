@@ -4,7 +4,7 @@ emoji: "🌈"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [ios, swift, thread]
 published: true
-publication: yumemi_inc
+publication_name: yumemi_inc
 ---
 
 iOSアプリで時間のかかる処理が発生すると何が起こるのでしょうか？
