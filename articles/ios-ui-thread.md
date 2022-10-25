@@ -3,7 +3,7 @@ title: "iOSアプリで時間のかかる処理をする"
 emoji: "🌈"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [ios, swift, thread]
-published: false
+published: true
 ---
 
 iOSアプリで時間のかかる処理が発生すると何が起こるのでしょうか？
