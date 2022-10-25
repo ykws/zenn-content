@@ -22,11 +22,11 @@ https://github.com/ykws/FreezingApp
 
 例えば、以下のようなアプリがあったとして、「Push Me!」のボタンをタップしたとします。
 
-![](https://storage.googleapis.com/zenn-user-upload/d3e323786c74-20221025.png =200x)
+![](https://storage.googleapis.com/zenn-user-upload/fec4d4d3642a-20221025.png　 =200x)
 
 すると、地球のアイコンがインジケーターに変わって回転のアニメーションが始まり、何か処理を行なっている様子を感じ取れます。しばらくすると、インジケーターが地球のアイコンに戻り、処理が完了した様子を感じ取れます。
 
-![](https://storage.googleapis.com/zenn-user-upload/da0395ed118b-20221025.png =200x)
+![](https://storage.googleapis.com/zenn-user-upload/2e7d7e2225ae-20221025.png =200x)
 
 iOSアプリでは、至る所にユーザに対してアニメーションのフィードバックを返して何が起こっているのか絶えずユーザに伝える工夫がなされており、それが当たり前になっています。
 
@@ -36,7 +36,7 @@ https://developer.apple.com/design/human-interface-guidelines/components/status/
 
 さて、実は以下の画面でも上記と同じように処理を行なっているのですが、何か処理が始まっても地球のアイコンのままでインジケーターに変わりません。しばらくすると、同じように処理は完了するようですが、アニメーションがないため、いつ完了したのかわかりません。ユーザからするとアプリが固まったように見えます。開発者が気をつけないと、時間のかかる処理に対して、前述の当たり前のフィードバックは実現できないことも容易に起こり得てしまいます。
 
-![](https://storage.googleapis.com/zenn-user-upload/ba41f82694e8-20221025.png =200x)
+![](https://storage.googleapis.com/zenn-user-upload/65673dcdc7b4-20221025.png =200x)
 
 # 一体何が起こっているのか？
 
