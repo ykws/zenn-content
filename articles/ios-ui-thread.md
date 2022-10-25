@@ -8,7 +8,17 @@ published: false
 
 iOSアプリで時間のかかる処理が発生すると何が起こるのでしょうか？
 
-# 時間のかかる処理
+デモアプリを用意したので、手元で確認しながら読み進めることをできるようにしています。
+
+https://github.com/ykws/FreezingApp
+
+# はじめに
+
+レビューをしていて時間のかかる処理に対して、iOSアプリではこれを使えば良いと示すのは簡単ですが、どうしてそれが必要なのか順序立てて説明するために今回の記事を書きました。
+
+フレームワークが高度に抽象化し、良しなにやってくれるので、現代のプログラミングにおいては知らなくて良いことの一つかもしれません。
+
+# 時間のかかる処理とは
 
 例えば、以下のようなアプリがあったとして、「Push Me!」のボタンをタップしたとします。
 
@@ -135,13 +145,6 @@ GCD(Grand Central Dispatch)に関する文献・記事は Objective-C で扱わ�
 - [UI 関連の機能はメインスレッドで実行すること : Objective-C プログラミング](https://ez-net.jp/article/D9/pFIzkE5B/-augKeCpM4zZ/)
 - [macOS/iOSスレッドプログラミング（ThreadとRunLoop）](https://qiita.com/cubenoy22/items/098a90133dfdc3f33ccc)
 
-## デモアプリ
-
-冒頭で紹介したデモアプリのリポジトリです。
-デモの動画もリンク先で確認可能です。
-
-https://github.com/ykws/FreezingApp
-
 # Swift Concurrency
 
 なお Swift Concurrency を利用するとここまで述べてきたことも気にしなくて良くなります。
@@ -155,6 +158,12 @@ await doSomething() // 時間のかかる処理
 
 ただし、これを実行しているのがメインスレッドである場合に限るので、別のコードがこの処理をメインスレッド以外で呼んでいた場合は、画面の更新ではやはり、メインスレッドの切り替えは必要になります。
 
-Swift Concurrency については以下の記事が詳しいです。
+Swift Concurrency については以下の記事が詳しく、ここでは詳細には触れません。
 
 https://zenn.dev/akkyie/articles/swift-concurrency
+
+# もっと深く
+
+ここまで見てきたマルチスレッドプログラミングについて、もっと深く知りたくなった人向けの書籍を紹介して終わります。（私は積読しており、未来の自分に対するメッセージでもあります。）
+
+https://www.oreilly.co.jp/books/9784873114354/
