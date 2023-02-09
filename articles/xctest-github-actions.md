@@ -63,6 +63,11 @@ https://github.com/ykws/XCTestExample/pull/2
 
 ![](https://storage.googleapis.com/zenn-user-upload/b11d59d128dc6f06756bbdb8.png =400x)
 
+## わざとビルドを失敗させる
+https://github.com/ykws/XCTestExample/pull/5
+
+テストだけでなく、ビルドエラーの場合も同様に検知可能です。
+
 ## ちゃんとテストを成功させる
 https://github.com/ykws/XCTestExample/pull/3
 
@@ -73,3 +78,5 @@ https://github.com/ykws/XCTestExample/pull/3
 ワークフローが成功するとマージできるようになります。
 
 ![](https://storage.googleapis.com/zenn-user-upload/2fffb5f49c26227309578928.png)
+
+
