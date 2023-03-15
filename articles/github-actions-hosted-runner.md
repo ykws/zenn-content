@@ -56,7 +56,7 @@ xcodebuild test -project XCTestExample.xcodeproj/ -scheme XCTestExample -sdk iph
 
 # 特徴
 - 実行速度は自環境のマシンスペックに依存します
-  - 自分の環境では、 GitHub よりも速かったです
+  - 自分の環境では、 GitHub Actions で 7m 55s かかっていたのが 1m 58s になりました
 - 自分の PC で runner のスクリプトが実行中でないと CI が動かないです
 
 ## 設定解除
