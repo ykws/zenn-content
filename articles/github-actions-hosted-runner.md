@@ -2,7 +2,7 @@
 title: "GitHub Actions でホステッドランナーを使う"
 emoji: "🚀"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [github-actions]
+topics: [github-actions,mac]
 published: false
 ---
 
