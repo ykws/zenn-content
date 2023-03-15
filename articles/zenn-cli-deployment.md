@@ -2,7 +2,7 @@
 title: "Zenn CLI を利用して記事を公開する"
 emoji: "🐥"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [zenn]
+topics: [zenn,node,mac]
 published: true
 ---
 
