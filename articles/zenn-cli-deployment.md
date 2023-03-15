@@ -15,23 +15,23 @@ published: true
 
 | Name | Version |
 | ---- | ------- |
-| zenn-cli | v0.1.95 |
-| macOS | 11.5.1 |
-| node | v15.8.0 |
-| npm/npx | 7.21.1 |
-| n | 7.0.1 |
+| zenn-cli | v0.1.141 |
+| macOS | 13.2.1 |
+| node | v19.8.0 |
+| npm/npx | 9.6.1 |
 
 # 手順
 
 1. GitHub にリポジトリを作成
 2. Zenn と GitHub リポジトリを連携
-3. Zenn CLI をインストール
-4. ローカルリポジトリの Zenn 用セットアップ
-5. Zenn CLI で記事を作成
-6. GitHub リポジトリを更新
+3. [Node.js](https://nodejs.org/en/) をインストール
+4. [Zenn CLI](https://github.com/zenn-dev/zenn-editor) をインストール
+5. ローカルリポジトリの Zenn 用セットアップ
+6. Zenn CLI で記事を作成
+7. GitHub リポジトリを更新
 
 ## Zenn コンテンツ管理リポジトリ
-自分の場合は次のリポジトリで Zenn コンテンツを管理するようにしてみました。
+次のリポジトリで Zenn コンテンツを管理しています。
 
 [ykws/zenn-content](https://github.com/ykws/zenn-content)
 
