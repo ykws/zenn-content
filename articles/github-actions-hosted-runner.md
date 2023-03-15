@@ -8,27 +8,30 @@ published: false
 
 # 動機
 
-GitHub Actions を利用して iOS アプリの CI 環境を構築しようとすると、 macOS 環境が必要になってきます。このとき private リポジトリを対象とすると、料金が高額になりやすいです。執筆時点では、 Linux の 10倍の速さで無料枠を消費し、 1分辺りの料金も 10倍です。
+GitHub Actions を利用して iOS アプリの CI 環境を構築しようとすると、 macOS 環境が必要になってきます。このとき private リポジトリを対象とすると、料金が高額になりやすいです。執筆時点では、 Linux の **10倍の速さで無料枠を消費**し、 **1分辺りの料金も 10倍**です。
 
 https://docs.github.com/ja/billing/managing-billing-for-github-actions/about-billing-for-github-actions
 
-そこで登場するのがセルフホステッドランナーになります。
+そこで登場するのが**セルフホステッドランナー**になります。
 
 https://docs.github.com/ja/actions/hosting-your-own-runners/about-self-hosted-runners
 
-これは自分で用意した(self-hosted)実行環境(runner)で CI を動かすことができるようになります。つまり、 GitHub Actions で macOS 環境にかかるはずの費用が 0 になります。
+これは自分で用意した(**self-hosted**)実行環境(**runner**)で CI を動かす仕組みです。つまり、 GitHub Actions で macOS 環境にかかるはずの**費用が 0** になります。
 
-というわけで、 GitHub private リポジトリで iOS アプリの CI 環境を構築する際の有力な選択肢になります。
+そのため、 GitHub private リポジトリで iOS アプリの CI 環境を構築する際の有力な選択肢になります。
 
-## 注意事項
-
+:::message alert
 public リポジトリでのセルフホステッドランナーは推奨されていません。 public リポジトリであれば、 macOS 環境であっても無料なので無理に採用する必要性もありません。
+:::
 
 > セルフホストランナーは、プライベートリポジトリでのみ利用することをおすすめします。 これは、ワークフロー内でコードを実行する pull request を作成することで、パブリック リポジトリのフォークによって、セルフホステッド ランナー マシン上で危険なコードが実行される可能性があるからです。
 
 # 導入手順
 
 リポジトリの Settings > Actions > Runner > New self-hosted runner から追加の手順が表示されるので、それに従えば良いです。
+
+![](https://storage.googleapis.com/zenn-user-upload/95892b9e94f4-20230316.png)
+
 
 ## 導入例
 
@@ -38,6 +41,13 @@ https://github.com/ykws/XCTestExample
 
 ## 環境構築
 
+セルフホステッドする環境で実行したい CI が処理できる必要があります。
+今回導入を試したリポジトリでは、以下のコマンドでビルドとテストを実行します。
+
+```
+xcodebuild test -project XCTestExample.xcodeproj/ -scheme XCTestExample -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 14"
+```
+
 - `xcodebuild` でのビルドを有効な状態にします
   - `xcodebuild` が有効でない場合、以下のように Xcode の指定が必要です
   - `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`
@@ -45,13 +55,13 @@ https://github.com/ykws/XCTestExample
   - 無効な Simulator を指定している場合は、有効な Simulator のリストが表示されるのでその中から選択します
 
 # 特徴
-- 自環境のマシンスペックに依存します
+- 実行速度は自環境のマシンスペックに依存します
   - 自分の環境では、 GitHub よりも速かったです
-- 自分の PC でスクリプトが実行中でないと CI が動かないです
+- 自分の PC で runner のスクリプトが実行中でないと CI が動かないです
 
 ## 設定解除
 
-Runners の一覧から Remove runner が可能です。
+Runners の一覧から `Remove runner` が可能です。
 
 ## 再設定
 
@@ -63,8 +73,6 @@ Runners の一覧から Remove runner が可能です。
 rm .credentials
 rm .runner
 ```
-
-その後 `c が可能です。
 
 ## 再設定
 
@@ -79,5 +87,4 @@ rm .runner
 
 その後 `./config.sh` から始まるコマンドを実行すれば良いです。
 
-Enjoy CI!
-
+**Enjoy CI!!**
