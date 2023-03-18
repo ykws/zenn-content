@@ -4,6 +4,7 @@ emoji: "🚀"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [github-actions,mac]
 published: true
+publication_name: yumemi_inc
 ---
 
 # はじめに
