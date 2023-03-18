@@ -3,7 +3,7 @@ title: "レビューコメントにメタ情報を持たせよう"
 emoji: "📛"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [chromeextension,github,bitbucket]
-published: false
+published: true
 ---
 
 # はじめに
