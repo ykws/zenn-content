@@ -21,7 +21,7 @@ Text Blaze の利用手順は上の記事で詳しく紹介されているので
 
 # 自分の設定内容
 
-
+## GitHub
 
 | badge | 期待するリアクション | 意味 | Text Blaze - shortcut | Text Blaze - content |
 |-------|------|------|------|------|
