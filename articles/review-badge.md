@@ -4,6 +4,7 @@ emoji: "📛"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [chromeextension,github,bitbucket]
 published: true
+publication_name: yumemi_inc
 ---
 
 # はじめに
