@@ -21,6 +21,8 @@ Text Blaze の利用手順は上の記事で詳しく紹介されているので
 
 # 自分の設定内容
 
+
+
 | badge | 期待するリアクション | 意味 | Text Blaze - shortcut | Text Blaze - content |
 |-------|------|------|------|------|
 | ![ask-badge](https://img.shields.io/badge/review-ask-yellowgreen.svg) | 回答必須 | 確認 | `/ask` | `![ask-badge](https://img.shields.io/badge/review-ask-yellowgreen.svg)` |
