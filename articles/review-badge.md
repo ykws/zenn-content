@@ -2,7 +2,7 @@
 title: "プルリクエストへのコメントにラベルバッジをつけよう"
 emoji: "📛"
 type: "idea" # tech: 技術記事 / idea: アイデア
-topics: [chromeextension]
+topics: [chromeextension,github,bitbucket]
 published: false
 ---
 
@@ -72,3 +72,8 @@ GitHub Code Suggestion を利用する時、レビューコメントの段階と
 ## good を追加
 レビューをしていて、ここは特に良いと思った点をコメントするようにしています。
 単に褒めているだけという意図を明確にするためにこのバッジが目印になります。
+
+# おわりに
+ここまで Chrome Extension を前提に書いてきましたが、 GitHub に限定するなら、 Saved replies も活用でき、以下の記事で紹介されています。ここで紹介したラベル付けとも異なり、考え方の参考になるので、合わせて読んでもらえたらと思います。
+
+https://zenn.dev/hacobell_dev/articles/code-review-comment-prefix
