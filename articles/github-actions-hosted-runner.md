@@ -2,7 +2,7 @@
 title: "GitHub Actions でホステッドランナーを使う"
 emoji: "🚀"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [github-actions,mac,ios]
+topics: [github,github-actions,mac,ios]
 published: true
 publication_name: yumemi_inc
 ---
@@ -102,7 +102,7 @@ xcodebuild: error: Unable to find a destination matching the provided destinatio
 ## 結果
 - 快適です
 - 実行速度は自環境のマシンスペックに依存します
-  - 自分の環境では、 GitHub Actions で 7m 55s かかっていたのが 1m 58s になりました
+  - 自分の環境では、 GitHub Actions で `7m 55s` かかっていたのが `1m 58s` になりました
 - 自分の PC で runner のスクリプトが実行中でないと CI は動かないです
 
 # 補足
