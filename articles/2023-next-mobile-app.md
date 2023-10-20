@@ -42,7 +42,7 @@ published: false
 
 モバイルアプリの画面のインタフェースの特徴として、様々な形と意図を持つ UI  を自由に変更・配置できるため、箇条書きで示したハードに依存する固定化された役割ではなく、様々な表現と役割を担うことが可能になっています。
 
-visionOS を見た時に今のインタフェースの主役であるこの画面の役割が変わると思いました。もちろん、 iOS アプリの延長として visionOS の空間に再配置することは可能ですが、折角固定化された画面がなくなるのであれば、変えたいという思いと使命感があります。
+visionOS を見た時に今のインタフェースの主役である画面の役割が変わると思いました。もちろん、 iOS アプリの延長として visionOS の空間に再配置することは可能ですが、折角固定化された画面がなくなるのであれば、変えたいという思いと使命感があります。
 
 これからのモバイルアプリのインタフェースを考えるにあたって、人を介さずにやり取りできる観点を意識して持っておきたいので、 UI に限定されない場面では、インタフェースと表記します。
 
@@ -51,7 +51,7 @@ visionOS を見た時に今のインタフェースの主役であるこの画�
 
 ### これからのインタフェース
 
-これからのインタフェースを考えるにあたって、2015年に出版された『さよなら、インタフェース』[^no-ui]という本を紹介します。副題が**『脱「画面」の思考法』**とあり、タイトルでのインタフェースは画面を指していると思って良いです。この本の中で印象的な部分を引用します。
+これからのインタフェースを考えるにあたって、2015年に出版された『さよなら、インタフェース』[^no-ui]という本を紹介します。副題が**『脱「画面」の思考法』**とあり、タイトルでのインタフェースは画面を指していると思ってよいです。この本の中で印象的な部分を引用します。
 
 > 本書の中で、筆者はユーザーインプットではなく、マシンインプットを考えろと言う。ユーザーが何かを入力するのではなく、マシンがさまざまな情報を自動的に取得し、それを元にユーザーの必要なものを提供するのがこれからのインターフェースだと。
 
@@ -95,12 +95,23 @@ visionOS を見た時に今のインタフェースの主役であるこの画�
 
 ### サンプルアプリ
 
-iPhone アプリのタッチスクロールをセンサーを利用したスクロールに変えるサンプルアプリを用意しました。下記 URL からソースコードを入手できます。ビルドして iPhone にインストールすることで実際に UI の触り心地を確かめることができます。
+タッチスクロールをセンサーを利用したスクロールに変えるサンプルアプリを用意しました。
 
-https://github.com/ykws/MotionScrollApp
+<img alt="iOS ソースコードへの QR コード" style="float:right;margin-left:16px" width=80 src="./images_kawashima/qrcode-ios.png">
 
+下記 URL または QR コードからソースコードを入手できます。ビルドして iPhone にインストールすることで実際に UI の触り心地を確かめることができます。
 
-#### Core Motion を使う
+https://github.com/ykws/motion-scroll-ios
+
+<img alt="Android ソースコードへの QR コード" style="float:right;margin-left:16px" width=80 src="./images_kawashima/qrcode-android.png">
+
+下記 URL または QR コードからソースコードを入手できます。ビルドして Android にインストールすることで実際に UI の触り心地を確かめることができます。
+
+https://github.com/ykws/motion-scroll-android
+
+### サンプルアプリの解説
+#### 傾きの検知を利用できるようにする
+##### iOS
 
 Core Motion[^core-motion] を利用して iPhone の傾きを取得できます。次のように `import` すれば使えるようになります。
 
@@ -109,7 +120,16 @@ Core Motion[^core-motion] を利用して iPhone の傾きを取得できます�
 import CoreMotion
 ```
 
+##### Android
+
+SensorManger[^sensor-manager] を利用して Android の傾きを取得できます。 Manifest ファイルでの宣言が必要です。
+
+```xml
+<uses-feature android:name="android.hardware.sensor.accelerometer" />
+```
+
 #### 傾きの検知を開始する
+##### iOS
 
 `CMMotionManager`[^motion-manager] の `startAccelerometerUpdates`[^start-accelerometer-updates] を呼ぶことで傾きの検知を開始できます。クロージャに傾きが更新された時の処理を書きます。更新の頻度は `accelerometerUpdateInterval`[^accelerometer-update-interval] で指定できます。
 
@@ -125,7 +145,25 @@ motionManager.startAccelerometerUpdates(to: .main) { [weak self] (data, error) i
 }
 ```
 
+##### Android
+
+`SensorManager` の `registerListener`[^register-listener] に `SensorEventListener`[^sensor-event-listener] を登録して、傾き更新の通知を受け取ることができるようになります。
+
+```kotlin
+val listener = object : SensorEventListener {
+    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {}
+    override fun onSensorChanged(event: SensorEvent) {
+        // 傾きが更新された時の処理
+    }
+}
+
+val sensorManager = context.getSystemService(SensorManager::class.java)
+val accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+sensorManager.registerListener(listener, accelerometer, SensorManager.SENSOR_DELAY_GAME)
+```
+
 #### 傾きの検知を終了する
+##### iOS
 
 `CMMotionManager` の `stopAccelerometerUpdates`[^stop-accelerometer-updates] を呼ぶことで傾き検知を終了できます。 `deinit` などで呼ぶようにしましょう。
 
@@ -133,9 +171,19 @@ motionManager.startAccelerometerUpdates(to: .main) { [weak self] (data, error) i
 motionManager.stopAccelerometerUpdates()
 ```
 
+##### Android
+
+`SensorManager` の `unregisterListener`[^unregister-listener] を呼ぶことで傾きの検知を終了できます。 `onDispose` など呼ぶようにしましょう。
+
+```kotlin
+sensorManager.unregisterListener(listener)
+```
+
 #### ボタンと組み合わせてスクロールを実装する
 
 無制限に傾きでスクロールするのは操作しづらいので、左下にボタンを配置します。ボタンをタップしている間はスクロールするように制御を変えます。ボタンをタッチした時の傾きを基準として、そこから手前に傾けると下に、奥に傾けると上にスクロールするようにしてみました。
+
+##### iOS
 
 ```swift
 motionManager.startAccelerometerUpdates(to: .main) { [weak self] (data, error) in
@@ -167,31 +215,55 @@ motionManager.startAccelerometerUpdates(to: .main) { [weak self] (data, error) i
 }
 ```
 
+##### Android
+
+
+```kotlin
+val density = LocalDensity.current.density
+
+override fun onSensorChanged(event: SensorEvent) {
+    // TYPE_ACCELEROMETER を指定すると、
+    // SensorEvent.values[1] から、 y 軸方向の加速力（重量を含む）を取得できます
+    //
+    // https://developer.android.com/guide/topics/sensors/sensors_motion
+
+    // ボタンをタッチした時の傾きを基準とする
+    if (baseY == null) baseY = event.values[1]
+    
+    // 基準の軸から今の傾きの差分を求めて、任意の係数で補正します
+    scrollOffset = (event.values[1] - (baseY ?: 0f)) * 100 * density
+}
+```
+
 [^x-twitter]: https://about.twitter.com/ja
 [^core-motion]: https://developer.apple.com/documentation/coremotion
+[^sensor-manager]: https://developer.android.com/guide/topics/sensors/sensors_overview
 [^motion-manager]: https://developer.apple.com/documentation/coremotion/cmmotionmanager
 [^start-accelerometer-updates]: https://developer.apple.com/documentation/coremotion/cmmotionmanager/1616148-startaccelerometerupdates
 [^accelerometer-update-interval]: https://developer.apple.com/documentation/coremotion/cmmotionmanager/1616135-accelerometerupdateinterval
+[^register-listener]: https://developer.android.com/reference/android/hardware/SensorManager#registerListener(android.hardware.SensorEventListener,%20android.hardware.Sensor,%20int)
+[^sensor-event-listener]: https://developer.android.com/reference/android/hardware/SensorEventListener
 [^stop-accelerometer-updates]: https://developer.apple.com/documentation/coremotion/cmmotionmanager/1616138-stopaccelerometerupdates
+[^unregister-listener]: https://developer.android.com/reference/android/hardware/SensorManager#unregisterListener(android.hardware.SensorEventListener)
 
 ## おわりに
 
 今回紹介した案は、当たり前になっているけどユーザ操作量が多く、それをなくす、もしくは減らすことはできないかというユースケースに取り組みました。この方法がベストだとかそういうことを言いたいのではなく、当たり前になっている UI も変えることが可能であり、それをプログラマ[^designer-is-programmer]は**すぐに試すことができる**ということを伝えたかったです。
 
-iPhone には他にもセンサーが搭載されていて、 Apple は CoreMotion のように、様々な機能を framework として開放しています。
+スマホには他にもセンサーが搭載されていて、 Apple は CoreMotion を Android は SensorManager といった形で、様々な機能を開放しています。
 
-現代では、チーム開発が主流となっていて、 UI/UX はデザイナや顧客が考えるケースが増えていると思います。ですが、モバイルデバイスの特徴を活かして、**マシンにユーザを従わせるのではなく、ユーザにマシンが従うようにシステムを設計・構築するのはプログラマの役目**だと考えています。大規模なチーム開発では、インタフェースを設計・構築する役割が分散するケースが多く、何かを試行錯誤する機会を得るのは難しいこともあると思います。
+現代では、チーム開発が主流となっていて、 UI/UX はデザイナや顧客が考えるケースが増えていると思います。ですが、スマホの特徴を活かして、**マシンにユーザを従わせるのではなく、ユーザにマシンが従うようにシステムを設計・構築するのはプログラマの役目**だと考えています。大規模なチーム開発では、インタフェースを設計・構築する役割が分散するケースが多く、何かを試行錯誤する機会を得るのは難しいこともあると思います。
 
-そこでぜひ、小規模で、**可能なら一人で**モバイルアプリのインタフェースの設計と構築を、 NoUI やマシンインプットの観点で再設計する機会を、一人でも多くの人が増えてほしいと思っています。そして来るべき visionOS の時代に備えたインタフェースを一緒に模索できたらと思います。そのための基礎体力として、既成の iOS のインタフェースにおいても十分に改良の余地があり、デバイスの可能性を拡張または再構築していく体験が重要になってくると思っています。
+そこでぜひ、小規模で、**可能なら一人で**モバイルアプリのインタフェースの設計と構築を、 NoUI やマシンインプットの観点で再設計する機会を、一人でも多くの人が増えてほしいと思っています。そして来るべき visionOS の時代に備えたインタフェースを一緒に模索できたらと思います。そのための基礎体力として、既成のスマホのインタフェースにおいても十分に改良の余地があり、拡張または再構築していく体験が重要になってくると思っています。
 
 ### ヒント
-今後、デバイスの可能性を拡張または再構築するためのヒントを載せておきます。
+今後、スマホの可能性を拡張または再構築するためのヒントを載せておきます。
 
-- デバイスに搭載されているセンサーにはどんなものがあるか調べてみよう
+- スマホに搭載されているセンサーにはどんなものがあるか調べてみよう
 - SDK が提供している API にはどんなものがあるか調べてみよう
 - 面倒だったのに慣れてしまった操作としてどんなものがあるか思い出してみよう
 - もし画面がなかったら（あるいは目が見えない人に）どんな表現で情報を伝えることができるか考えてみよう
 
-デバイスの可能性を拡張または再構築するということは、**新しいインタフェースを構築すること**でもあります。一緒に新しいインタフェースを作っていきましょう。
+スマホの可能性を拡張または再構築するということは、**新しいインタフェースを構築すること**でもあります。一緒に新しいインタフェースを作っていきましょう。
 
-[^designer-is-programmer]: ここでのプログラマはデザイナも含みます。 iPhone SDK がデザイナとプログラマの境界を曖昧にしたので、プログラミングを行うデザイナをプログラマと敬意を込めて呼んでいます。
+[^designer-is-programmer]: ここでのプログラマはデザイナも含みます。 iPhone SDK がデザイナとプログラマの境界を曖昧にしたので、プログラミングを行うデザイナもプログラマと敬意を込めて呼んでいます。
