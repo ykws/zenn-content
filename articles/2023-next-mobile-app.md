@@ -195,7 +195,7 @@ sensorManager.unregisterListener(listener)
 
 ##### iOS
 
-UIKit[^uikit] ベースでの実装サンプルになっています。当初 SwiftUI[^swift-ui] での実装を試していたのですが、実現が難しそうなので採用を見送りました。  `ScrollViewReader`[^scroll-view-reader] を利用すると `ScrollViewProxy` を扱えるようになり `ScrollView` をコードから操作できるようになっています。公開されている `scrollTo`[^scroll-to] は `id` を渡して任意の位置へスクロールする想定になっています。今回は座標ベースの処理となるので採用を見送りました。
+UIKit[^ui-kit] ベースでの実装サンプルになっています。当初 SwiftUI[^swift-ui] での実装を試していたのですが、実現が難しそうなので採用を見送りました。  `ScrollViewReader`[^scroll-view-reader] を利用すると `ScrollViewProxy` を扱えるようになり `ScrollView` をコードから操作できるようになっています。公開されている `scrollTo`[^scroll-to] は `id` を渡して任意の位置へスクロールする想定になっています。今回は座標ベースの処理となるので採用を見送りました。
 
 
 ```swift
