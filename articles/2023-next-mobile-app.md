@@ -3,7 +3,7 @@ title: "モバイルアプリの操作方法を疑ってみる"
 emoji: "🕶️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [ios,android]
-published: false
+published: true
 ---
 
 > Think different.[^think-different]
