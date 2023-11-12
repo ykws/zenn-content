@@ -318,3 +318,22 @@ LaunchedEffect(scrollOffset) {
 - SDK が提供している API にはどんなものがあるか調べてみよう
 - 面倒だったのに慣れてしまった操作としてどんなものがあるか思い出してみよう
 - もし画面がなかったら（あるいは目が見えない人に）どんな表現で情報を伝えることができるか考えてみよう
+
+---
+
+## YUMEMI.grow
+
+YUMEMI.grow Mobile #8 にて、この内容を元に発表しました。
+
+https://yumemi.connpass.com/event/299907/
+
+https://www.youtube.com/watch?v=mxL9CJ6lvuw&list=PL3Utf2i5RcCzYbaBacTd10Ls_cWp2n0k-&index=44
+
+## ゆめみ大技林
+
+ゆめみ大技林 '23 (2)に、この記事を掲載しています。技術書店マーケットで購入が可能です。無料配布になります。
+
+https://techbookfest.org/product/2nuPxEDA5h1DQY26u38mrY?productVariantID=62SKMF1Q39YF7bEkYdzPu0
+
+### 紙版との差分
+- 注釈 29 が抜けていて採番し直したため、それ以降の数字にズレがあります https://github.com/ykws/zenn-content/commit/018442e69615fbcf320e29683f94a7d760f42b5a
