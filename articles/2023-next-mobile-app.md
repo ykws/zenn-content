@@ -4,6 +4,7 @@ emoji: "🕶️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [ios,android]
 published: true
+publication_name: yumemi_inc
 ---
 
 > Think different.[^think-different]
