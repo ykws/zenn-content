@@ -9,5 +9,5 @@ This repository is managed the contents of [Zenn](https://zenn.dev/) for me.
 ## Cheat sheet
 ### Create New Article
 ```
-$ npx zenn new:article --slug 記事のスラッグ --title タイトル --type idea --emoji ✨
+npx zenn new:article --slug 記事のスラッグ --title タイトル --type idea --emoji ✨
 ```
