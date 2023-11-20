@@ -101,7 +101,7 @@ https://developer.apple.com/design/human-interface-guidelines/designing-for-visi
 
 # おわりに
 
-既成のアプリを visionPro でも動かしたいという要望が出てくると予想します。その時点でアプリの再設計をするのでは、リリースまでに多くの時間と労力が必要となり、希望に応えるのは困難になるとも予想します。そこで先々の visionPro 対応も視野に入れているのあれば、今回のチェックリストを元に先行して対応を検討し始めることをおすすめしたいです。
+既成のアプリを visionPro でも動かしたいという要望が出てくると予想します。その時点でアプリの再設計をするのでは、リリースまでに多くの時間と労力が必要となり、希望に応えるのは困難になるとも予想します。そこで先々の visionPro 対応も視野に入れているのあれば、今回のチェックリストを元に先行して対応を検討し始めることをおすすめしたいです。特に Volume や Landscape 対応は表面的なレイアウトの課題ではなく、コンテンツをどのように捉えて表現するのかを、今後より求められていくと感じています。
 
 [^vision-os]: https://developer.apple.com/visionos/
 [^vision-os-hello-world]: https://developer.apple.com/documentation/visionos/world#Declare-a-volumetric-window-for-the-globe
