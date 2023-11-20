@@ -30,7 +30,7 @@ https://techbookfest.org/product/cA3PMcjbumehPUriiECzgt?productVariantID=wzGMbGj
 - **Landscape** に対応する
 - **Day/Night** に対応する
 - ジェスチャーに対応する
-- アイディアを形にしておく
+- アイディアを形にする
 
 ## Volume の概念を抽出する
 
