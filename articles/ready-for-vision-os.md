@@ -52,7 +52,7 @@ Portrait 固定のアプリを visionPro 上でそのまま表示するのは効
 
 後述する公式のガイドにも全ての向きをサポートせよと記載があります。
 
-> Specify the supported interface orientations[^supported-interface-orientations]
+> Support all interface orientations whenever possible[^supported-interface-orientations]
 
 年々縦方向に長くなるデバイスに対するアプリの表現方法として、ハーフモーダルやウィジェットが出始めていて、visionPro の空間にアプリを表現する上でも有効になるであろうと感じています。
 
@@ -101,7 +101,7 @@ https://developer.apple.com/design/human-interface-guidelines/designing-for-visi
 
 # おわりに
 
-既成のアプリを visionPro でも動かしたいという要望が出てくると予想します。その時点でアプリの再設計をするのでは、リリースまでに多くの時間と労力が必要となり、希望に応えるのは困難になるとも予想します。そこで先々の visionPro 対応も視野に入れているのあれば、今回のチェックリストを元に先行して対応を検討し始めることをおすすめしたいです。特に Volume や Landscape 対応は表面的なレイアウトの課題ではなく、コンテンツをどのように捉えて表現するのかを、今後より求められていくと感じています。
+既成のアプリを visionPro でも動かしたいという要望が出てくると予想します。その時点でアプリの再設計をするのでは、リリースまでに多くの時間と労力が必要となり、希望に応えるのは困難になるとも予想します。仮にそのまま visionPro に取り込めるからと安易に持ち込んでしまうと体験が損なわれる可能性を危惧しています。そうならないように Apple の審査が厳しくなるとも思っていますが。そこで先々の visionPro 対応も視野に入れているのあれば、今回のチェックリストを元に先行して対応を検討し始めることをおすすめしたいです。特に Volume や Landscape 対応は表面的なレイアウトの課題ではなく、コンテンツをどのように捉えて表現するのかを、今後より求められていくと感じています。この考えは、ディスプレイの領域が大きくなっている iOS/iPadOS にも活かされると思っています。
 
 [^vision-os]: https://developer.apple.com/visionos/
 [^vision-os-hello-world]: https://developer.apple.com/documentation/visionos/world#Declare-a-volumetric-window-for-the-globe
