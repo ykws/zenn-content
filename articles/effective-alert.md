@@ -1,5 +1,5 @@
 ---
-title: "アラートを使う"
+title: "効果的にアラートを使おう"
 emoji: "🚨"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [ios]
