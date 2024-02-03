@@ -3,7 +3,7 @@ title: "GitHub Actions Node 20 対応状況"
 emoji: "👷"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [githubactions, nodejs]
-published: false
+published: true
 ---
 
 # はじめに
