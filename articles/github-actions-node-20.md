@@ -22,19 +22,18 @@ https://github.com/nodejs/Release/#end-of-life-releases
 モバイルアプリ関連の Actions が主になります
 :::
 
-GitHub Actions では Node 20 の対応が進んでいます。以下はその対応状況です。
+各 Actions では Node 20 の対応が進んでいます。以下はその対応状況です。
 
 | 名前 | 対応バージョン | Release Note | Pull Request |
 | -- | -- | -- | -- |
 | checkout | v4.0.0 | https://github.com/actions/checkout/releases/tag/v4.0.0 | https://github.com/actions/checkout/pull/1436 |
 | cache | v4.0.0 | https://github.com/actions/cache/releases/tag/v4.0.0 | https://github.com/actions/cache/pull/1284 |
-| gradle-build-action | v3.0.0 | https://github.com/gradle/gradle-build-action/releases/tag/v3.0.0 | https://github.com/gradle/gradle-build-action/issues/946 |
-| setup-java | v4.0.0 | https://github.com/actions/setup-java/releases/tag/v4.0.0 | https://github.com/actions/setup-java/pull/558 |
 | setup-node | v4.0.1 | https://github.com/actions/setup-node/releases/tag/v4.0.1 | https://github.com/actions/setup-node/pull/889 |
+| setup-java | v4.0.0 | https://github.com/actions/setup-java/releases/tag/v4.0.0 | https://github.com/actions/setup-java/pull/558 |
+| gradle-build-action | v3.0.0 | https://github.com/gradle/gradle-build-action/releases/tag/v3.0.0 | https://github.com/gradle/gradle-build-action/issues/946 |
 | auto-assign-action | v1.2.6 | https://github.com/kentaro-m/auto-assign-action/releases/tag/v1.2.6 | https://github.com/kentaro-m/auto-assign-action/pull/158 |
 | review-assign-action | - | - | https://github.com/hkusu/review-assign-action/pull/32 |
 
 # おわりに
 
 Node 20 の生存期間は 2026年4月30日までです！
-
