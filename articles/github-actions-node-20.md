@@ -13,7 +13,7 @@ GitHub Actions で Node 16 を利用していると次のような警告が表�
 > Report dependency differences
 Node.js 16 actions are deprecated. Please update the following actions to use Node.js 20: actions/setup-java@v3. For more information see: https://github.blog/changelog/2023-09-22-github-actions-transitioning-from-node-16-to-node-20/.
 
-Node 16 のメンテナンスは 2023年9月11日で終了しています。以下は各バージョンの生存期間の一覧です。
+Node 16 のメンテナンスは **2023年9月11日**に終了しています。以下は各バージョンの生存期間の一覧です。
 
 https://github.com/nodejs/Release/#end-of-life-releases
 
@@ -37,4 +37,4 @@ https://github.com/nodejs/Release/#end-of-life-releases
 
 # おわりに
 
-Node 20 の生存期間は 2026年4月30日までです！
+Node 20 の生存期間は **2026年4月30日**までです！
