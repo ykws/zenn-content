@@ -29,6 +29,7 @@ https://github.com/nodejs/Release/#end-of-life-releases
 | -- | -- | -- | -- |
 | checkout | v4.0.0 | https://github.com/actions/checkout/releases/tag/v4.0.0 | https://github.com/actions/checkout/pull/1436 |
 | cache | v4.0.0 | https://github.com/actions/cache/releases/tag/v4.0.0 | https://github.com/actions/cache/pull/1284 |
+| upload-artifact | v4.0.0 | https://github.com/actions/upload-artifact/releases/tag/v4.0.0 | https://github.com/actions/upload-artifact/pull/448 |
 | setup-node | v4.0.1 | https://github.com/actions/setup-node/releases/tag/v4.0.1 | https://github.com/actions/setup-node/pull/889 |
 | setup-java | v4.0.0 | https://github.com/actions/setup-java/releases/tag/v4.0.0 | https://github.com/actions/setup-java/pull/558 |
 | gradle-build-action | v3.0.0 | https://github.com/gradle/gradle-build-action/releases/tag/v3.0.0 | https://github.com/gradle/gradle-build-action/issues/946 |
