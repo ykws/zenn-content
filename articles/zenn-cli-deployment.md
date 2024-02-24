@@ -15,7 +15,7 @@ published: true
 
 | Name | Version |
 | ---- | ------- |
-| zenn-cli | v0.1.152 |
+| zenn-cli | v0.1.153 |
 | macOS | 14.2.1 |
 | node | v21.6.1 |
 | npm/npx | 10.4.0 |
