@@ -35,6 +35,7 @@ https://github.com/nodejs/Release/#end-of-life-releases
 | gradle-build-action | v3.0.0 | https://github.com/gradle/gradle-build-action/releases/tag/v3.0.0 | https://github.com/gradle/gradle-build-action/issues/946 |
 | auto-assign-action | v1.2.6 | https://github.com/kentaro-m/auto-assign-action/releases/tag/v1.2.6 | https://github.com/kentaro-m/auto-assign-action/pull/158 |
 | review-assign-action | v1.4.0 | https://github.com/hkusu/review-assign-action/releases/tag/v1.4.0 | https://github.com/hkusu/review-assign-action/pull/32 |
+| xcresulttool | 未対応 | - | https://github.com/kishikawakatsumi/xcresulttool/pull/760 |
 
 # おわりに
 
