@@ -10,7 +10,10 @@ published: false
 コミットに署名しましょう
 
 # ゴール
-GitHub上でVerifiedになっているコミットが署名された状態
+GitHub上でコミットにVerifiedのバッジがついた状態を目指します。
+Verified をクリックすると、次のようにポップアップで署名の状態について確認できます。
+
+![](https://storage.googleapis.com/zenn-user-upload/82ed7f16c123-20240324.png)
 
 # 前提
 Gitの初期設定ではコミットに署名はされません
