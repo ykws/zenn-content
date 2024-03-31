@@ -9,6 +9,8 @@ published: false
 # はじめに
 コミットに署名しましょう
 
+達人プログラマからの署名しようの項を引用
+
 # ゴール
 GitHub上でコミットにVerifiedのバッジがついた状態を目指します。
 Verified をクリックすると、次のようにポップアップで署名の状態について確認できます。
@@ -121,8 +123,19 @@ git log --show-signature -1
 ## Remote(GitHub)
 
 ### キー
+
+https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+
 ### メールアドレス
+
+1つの GitHub アカウントに対して複数のメールアドレスを登録可能です。
+参加している Organization からメールアドレスを発行されたら追加してリポジトリごとにメールアドレスを設定しましょう。
+
+https://docs.github.com/ja/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address
+
 ### Verified
+
+https://docs.github.com/ja/authentication/troubleshooting-commit-signature-verification/checking-your-commit-and-tag-signature-verification-status
 
 # おわりに
 
