@@ -13,26 +13,25 @@ published: false
 # はじめに
 コミットに署名しましょう
 
-# ゴール
-GitHub上でコミットに **Verified** のバッジがついた状態を目指します。
-**Verified** をクリックすると、次のようにポップアップで署名の状態について確認できます。
+## ゴール
+GitHub 上でコミットに **Verified** のバッジがついた状態を目指します。**Verified** をクリックすると、次のようにポップアップで署名の状態について確認できます。
 
 ![](https://storage.googleapis.com/zenn-user-upload/82ed7f16c123-20240324.png)
 
-# 前提
-Gitの初期設定ではコミットに署名は**されません**。
-それでもコミットは可能ですが、匿名のコミットになります。
-また署名には次のように段階があります。
+## 前提
+Git の初期設定ではコミットに署名は**されません**。それでもコミットは可能ですが、匿名のコミットになります。また署名には次のように段階があります。
 
 1. 名前とメールアドレスが設定されている
 2. コミットに署名されている
-3. GitHub 上で有効な署名と認識される
+3. ホスト上で有効な署名として認識されている
 
-ローカルでの作業と、リモートの作業がそれぞれ必要になります。
-ローカルは macOS を、リモートは GitHub を例に説明します。
-GitHub はドキュメントが充実しているのでリファレンスを示します。
+ローカルで署名できるようにする作業と、ホスト側で署名を有効化する作業がそれぞれ必要になります。ローカルは macOS を、ホスト側は GitHub を例に説明します。GitHub はドキュメントが充実しているのでリファレンスを示します。
 
-# ローカルで作業する
+:::message
+もし手元の環境で部分的にすでに対応済みの項目は読み飛ばして進めてください。例えば、すでに SSH キーを生成済みであれば、新しく生成し直す必要はありません。
+:::
+
+# 署名できるようにする
 ## バージョンを確認する
 記事執筆時のバージョンです。
 
@@ -69,7 +68,7 @@ brew install gpg pinentry
 ```
 
 ## SSH キーを生成する
-Remote(GitHub) との認証に利用する SSH キーを生成します。
+GitHub との認証に利用する SSH キーを生成します。
 
 ```
 ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -119,11 +118,10 @@ git log --show-signature -1
 
 https://docs.github.com/ja/authentication/managing-commit-signature-verification/generating-a-new-gpg-key
 
-# リモートで作業する
-Local の作業が完了したら次は Remote での作業です。
+# ホスト側で署名を有効化する
 
 ## SSH キーを追加する
-Local で生成した SSH キーを GitHub に追加します。
+ローカルで生成した SSH キーを GitHub に追加します。
 
 https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
 
@@ -134,7 +132,7 @@ https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/adding-a
 https://docs.github.com/ja/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address
 
 ## GPG キーを追加する
-次のコマンドを実行し、ペーストボードにコピーされた内容を GPG キーとして追加します。
+次のコマンドを実行し、ペーストボードにコピーされた内容を GitHub に GPG キーとして追加します。
 
 ```
 gpg --armor --export {key_id} | pbcopy
@@ -151,7 +149,7 @@ https://docs.github.com/ja/repositories/configuring-branches-and-merges-in-your-
 
 # おわりに
 
-冒頭でも引用した「達人プログラマー」からの言葉の続きを引用して終わります。この言葉に勇気づけられました。
+冒頭で引用した「達人プログラマー」からの言葉の続きを引用して終わります。当時この言葉にとても勇気づけられました。
 
 > あなたの名前をコード中に見い出すことによって、みんな、それがきっちりと記述、テスト、ドキュメント化されたものであることを確認できるのです。それが本当のプロの仕事です。それが本当のプロによって記述されたものなのです。[^signed]
 
