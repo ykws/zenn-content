@@ -3,7 +3,7 @@ title: "コミットに署名する"
 emoji: "🪪"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [git,github]
-published: false
+published: true
 ---
 
 > 「私はこれを記述した、そしてこの仕事の後ろには私が付いている」と。品質の証明として、あなたの署名が入っているべきなのです。[^signed]
