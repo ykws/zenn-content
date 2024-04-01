@@ -33,21 +33,26 @@ Git の初期設定ではコミットに署名は**されません**。それで
 :::
 
 # 署名できるようにする
-## バージョンを確認する
+## ツールをインストールする
 記事執筆時のバージョンです。
+
+:::message alert
+xz 問題があったので Homebrew **4.2.15** 以上の利用を強く推奨します
+:::
+
+:::details xz 問題
+xz v5.6.0/5.6.1 にバックドアが仕込まれてしまい、 Homebrew 4.2.14 以前では該当バージョンがインストールされる可能性があります。いつからか調べていないですが、この記事執筆時点では **4.2.14** と記載しており、筆者の環境にも xz 5.6.1 がインストールされてしまっていました。
+Homebrew 4.2.15 では xz をダウングレードして 5.4.6 がインストールされるようになっているため、安全です。詳しくは下記で議論されています。
+
+https://github.com/orgs/Homebrew/discussions/5243
+:::
 
 | Name | Version | Releases |
 | -- | -- | -- |
 | Git | 2.44.0 | https://github.com/git/git/tags |
-| Homebrew | 4.2.14 | https://github.com/Homebrew/brew/releases |
+| Homebrew | 4.2.15 | https://github.com/Homebrew/brew/releases |
 | Gnu Privacy Guard | 2.4.5 | https://github.com/gpg/gnupg/tags |
 | PINEntry | 1.3.0 | https://github.com/gpg/pinentry/tags |
-
-## ツールをインストールする
-- Git
-- Homebrew
-- Gnu Privacy Guard
-- PINEntry
 
 ### Git　をインストールする
 macOS では最初から Git がインストール済みです。
