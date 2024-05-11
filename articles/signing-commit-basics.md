@@ -1,9 +1,9 @@
 ---
 title: "コミットに署名するとはどういうことなのか"
-emoji: "✨"
+emoji: "🪪"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [git,github]
-published: false
+published: 
 ---
 
 > 貴方は誰ですか？[^the-perfect-insider]
