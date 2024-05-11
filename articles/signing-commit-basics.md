@@ -4,6 +4,7 @@ emoji: "🪪"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [git,github]
 published: true
+publication_name: yumemi_inc
 ---
 
 > 貴方は誰ですか？[^the-perfect-insider]
