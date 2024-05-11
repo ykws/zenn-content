@@ -30,15 +30,14 @@ published: true
 6. Zenn CLI で記事を作成
 7. GitHub リポジトリを更新
 
-## Zenn コンテンツ管理リポジトリ
+## コンテンツ管理
 次のリポジトリで Zenn コンテンツを管理しています。
 
-[ykws/zenn-content](https://github.com/ykws/zenn-content)
-
+https://github.com/ykws/zenn-content
 
 # 参考記事
 詳細は公式アカウントの次の記事を順に読むのが良いです。
 
-- [GitHubリポジトリでZennのコンテンツを管理する](https://zenn.dev/zenn/articles/connect-to-github)
-- [Zenn CLIをインストールする](https://zenn.dev/zenn/articles/install-zenn-cli)
-- [Zenn CLIを使ってコンテンツを作成する](https://zenn.dev/zenn/articles/zenn-cli-guide)
+https://zenn.dev/zenn/articles/connect-to-github
+https://zenn.dev/zenn/articles/install-zenn-cli
+https://zenn.dev/zenn/articles/zenn-cli-guide
