@@ -33,6 +33,7 @@ https://github.com/nodejs/Release/#end-of-life-releases
 | setup-node | v4.0.1 | https://github.com/actions/setup-node/releases/tag/v4.0.1 | https://github.com/actions/setup-node/pull/889 |
 | setup-java | v4.0.0 | https://github.com/actions/setup-java/releases/tag/v4.0.0 | https://github.com/actions/setup-java/pull/558 |
 | gradle-build-action | v3.0.0 | https://github.com/gradle/gradle-build-action/releases/tag/v3.0.0 | https://github.com/gradle/gradle-build-action/issues/946 |
+| wrapper-validation-action | v2.0.0 | https://github.com/gradle/wrapper-validation-action/releases/tag/v2.0.0 | https://github.com/gradle/wrapper-validation-action/pull/170 |
 | auto-assign-action | v1.2.6 | https://github.com/kentaro-m/auto-assign-action/releases/tag/v1.2.6 | https://github.com/kentaro-m/auto-assign-action/pull/158 |
 | review-assign-action | v1.4.0 | https://github.com/hkusu/review-assign-action/releases/tag/v1.4.0 | https://github.com/hkusu/review-assign-action/pull/32 |
 | xcresulttool | 未対応 | - | https://github.com/kishikawakatsumi/xcresulttool/pull/760 |
