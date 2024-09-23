@@ -73,7 +73,8 @@ kotlin.native.internal.IrLinkageError: Reference to class 'Uuid' can not be eval
 kotlinx.serialization.SerializationException: Serializer for class 'User' is not found.
 ```
 
-このエラーを回避するには、 kotlinx-serialization-json 1.7.1 を利用し続けるか、サードパーティの UUID から標準ライブラリに切り替える必要があります。
+このエラーは、 kotlinx-serialization-json 1.7.2 以降が標準ライブラリの kotlin.uuid に依存しているにもかかわらず、サードパーティの benasher44/uuid を使用しているため、 kotlinx-serialization-json 側で koltin.uuid/Uuid のクラス解決ができないことが原因です。
+このエラーを回避するには、引き続き kotlinx-serialization-json 1.7.1 を使用するか、サードパーティの UUID を標準ライブラリに切り替える必要があります。
 
 ### Kable
 また直接アプリケーションで UUID を利用していなくても、間接的に UUID を利用しているケースにおいて、この組み合わせを考慮する必要が生じます。
