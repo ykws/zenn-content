@@ -1,6 +1,6 @@
 ---
 title: "Kotlin の標準ライブラリで UUID が使えるようになりました"
-emoji: "🆔"
+emoji: "🔑"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [kotlin]
 published: false
@@ -16,22 +16,24 @@ https://kotlinlang.org/docs/whatsnew2020.html#support-for-uuids-in-the-common-ko
 :::
 
 ## これまで
-Kotlin で UUID を扱うときは Java の UUID を利用していました。
+Kotlin で UUID を扱う場合、従来は Java の UUID クラスを使用していました。これは JVM プラットフォームで動作する場合には問題ありませんが、 Kotlin Multiplatform では Java のライブラリを直接利用することができないため、別の方法が必要でした。
 
 https://docs.oracle.com/javase/jp/17/docs/api/java.base/java/util/UUID.html
 
 今現在使用中の Java の UUID はそのまま引き続き使用できます。
 
 ### Kotlin Mutliplatform
-Java の UUID で問題になるケースは Kotlin Multiplatform にありました。
-Kotlin の実装でないと Kotlin Multiplatform に組み込むことはできませんでした。これまでは Kotlin Multiplatform で UUID を扱う場合はサードパーティのライブラリを利用していました。
-GitHub で現時点で一番スター数が多いのは下記のライブラリです。
+Kotlin Multiplatform では Java の UUID を使用できなかったため、サードパーティのライブラリを依存していました。
+GitHub で現時点で一番スター数が多いのは次のライブラリです。
 
 https://github.com/benasher44/uuid
 
 ## Migration
 Kotlin 2.0.20 以降であれば、これまでサードパーティに依存していた部分を標準ライブラリに置き換えることが可能になります。
-以下は com.benasher44.uuid から kotlin.uuid への migration の一例です。
+以下は com.benasher44.uuid から kotlin.uuid への migration の一例です。（後述の Kabel の PR からの抜粋です）
+
+### parse
+文字列から Uuid を生成します。
 
 ```diff
 - import com.benasher44.uuid.uuidFrom
@@ -43,7 +45,8 @@ Kotlin 2.0.20 以降であれば、これまでサードパーティに依存し
 + val uuid = Uuid.parse("00002902-0000-1000-8000-00805f9b34fb")
 ```
 
-java.util.UUID -> kotlin.uuid.Uuid
+### toKotlinUuid
+java.util.UUID から kotlin.uuid.Uuid に変換します。
 
 ```diff
 + import kotlin.uuid.ExperimentalUuidApi
@@ -55,7 +58,8 @@ private val descriptor: PlatformDescriptor?
 +   get() = descriptors.firstOrNull { uuid == it.uuid.toKotlinUuid() }
 ```
 
-kotlin.uuid.Uuid -> java.util.UUID
+### toJavaUuid
+kotlin.uuid.Uuid から java.util.UUID に変換します。
 
 ```diff
 + import kotlin.uuid.ExperimentalUuidApi
@@ -66,7 +70,8 @@ kotlin.uuid.Uuid -> java.util.UUID
 + val uuid = ParcelUuid(value.uuid.toJavaUuid())
 ```
 
-fromLongs
+### fromLongs
+二つの Long から Uuid を生成します。
 
 ```diff
 - import com.benasher44.uuid.Uuid
@@ -78,7 +83,8 @@ fromLongs
 + val uuid = Uuid.fromLongs(mostSignificantBits, leastSignificantBits)
 ```
 
-Generate
+### random
+Uuid を生成します。
 
 ```diff
 - import com.benasher44.uuid.uuid4
@@ -90,9 +96,15 @@ Generate
 + val uuid = Uuid.random().toString()
 ```
 
+UUID v4 の生成ということで単純に置き換えています。
+
+> The returned uuid conforms to the IETF variant (variant 2) and version 4
+
+https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.uuid/-uuid/random.html
+
 ## 移行への注意点
-まだ **Experimental** の段階でも積極的に置き換えを進める動機として、他の依存関係が理由になることがあります。
-また逆に依存関係が理由で移行できないケースもあります。
+まだ **Experimental** 段階ですが、依存関係が理由で、 UUID の標準ライブラリへの移行を積極的に検討する場面もあります。
+一方で、依存関係によって移行が難しい場合もあります。
 以下は、ライブラリと UUID の依存関係における事例の紹介です。
 
 ### kotlinx-serialization-json
@@ -103,13 +115,16 @@ https://github.com/Kotlin/kotlinx.serialization/releases/tag/v1.7.2
 https://github.com/Kotlin/kotlinx.serialization/pull/2744
 
 ### Kable
-また直接自身のアプリで UUID を利用していなくても間接的に UUID を利用しているケースにおいてもこの組み合わせを考慮する必要があります。
+また直接アプリケーションで UUID を利用していなくても、間接的に UUID を利用しているケースにおいて、この組み合わせを考慮する必要が生じます。
 
-例えば、Kotlin Multiplatform Bluetooth Low Energy のライブラリ Kable はサードパーティの UUID ライブラリに依存しています。そのため、 kotlinx-serialization-json を先に 1.7.2 に上げることができません。前述の通り、このケースにおいては Runtime Exception が発生します。
+例えば、Kotlin Multiplatform Bluetooth Low Energy のライブラリ Kable はサードパーティの UUID ライブラリに依存しています。そのため、 kotlinx-serialization-json を 1.7.2 に更新する際に UUID の依存関係が競合し、 Runtime Exception が発生します。
 
 Kable の Kotlin Uuid の対応は 0.36.0 のマイルストーンで計画しています。
 
 https://github.com/JuulLabs/kable/pull/758
 
+この PR から前述の Migration は抜粋していて、コンテキストについて深く知りたい場合は参照ください。
+
 ## まとめ
-UUID は広く普及している仕組みのため、自身のアプリで直接的に、または間接的に利用するケースがあり、標準ライブラリへの切り替えは他の依存関係との兼ね合いもあって計画する必要があります。切り替えようと思っても切り替えできないこともあれば、切り替えようと思っていなくても切り替える必要が生じることがあります。特に依存するライブラリが更新された場合、予期せず UUID の切り替えが必要になるケースがあり得ます。 **Experimental** なのでプロダクトとの性質によっては導入の時期を慎重に判断する必要もあるため、周辺の依存関係についての動向について注意しておく必要があります。
+UUID は広く普及しているため、アプリケーションで直接的に、または間接的に利用されることが多くあります。そのため、標準ライブラリへの切り替えは、他の依存関係との兼ね合いも考慮して計画する必要があります。
+UUID の切り替えが難しい場合もありますが、依存するライブラリが更新された場合、予期せず切り替えが必要になることも考えられます。UUID の機能がまだ **Experimental** であるため、導入のタイミングは慎重に判断する必要があり、依存ライブラリの動向にも注視しておくことが重要です。
