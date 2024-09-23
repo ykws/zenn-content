@@ -15,7 +15,7 @@ https://kotlinlang.org/docs/whatsnew2020.html#support-for-uuids-in-the-common-ko
 利用する際は、 `@ExperimentalUuidApi` の Annotation か `-opt-in=kotlin.uuid.ExperimentalUuidApi` のコンパイルオプションを付与する必要があります。
 :::
 
-## これまで
+## これまでの課題
 Kotlin で UUID を扱う場合、従来は Java の UUID クラスを使用していました。これは JVM プラットフォームで動作する場合には問題ありませんが、 Kotlin Multiplatform では Java のライブラリを直接利用することができないため、別の方法が必要でした。
 
 https://docs.oracle.com/javase/jp/17/docs/api/java.base/java/util/UUID.html
