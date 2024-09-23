@@ -20,8 +20,6 @@ Kotlin で UUID を扱う場合、従来は Java の UUID クラスを使用し�
 
 https://docs.oracle.com/javase/jp/17/docs/api/java.base/java/util/UUID.html
 
-今現在使用中の Java の UUID はそのまま引き続き使用できます。
-
 ### Kotlin Mutliplatform
 Kotlin Multiplatform では Java の UUID を使用できなかったため、サードパーティのライブラリに依存していました。
 GitHub で現時点で一番スター数が多いのは次のライブラリです。
@@ -30,6 +28,7 @@ https://github.com/benasher44/uuid
 
 ## 移行への注意点
 Kotlin 2.0.20 以降であれば、これまでサードパーティに依存していた部分を標準ライブラリに置き換えることが可能になります。
+今現在使用中の Java の UUID はそのまま引き続き使用できるので、 Kotlin Multiplatform でなければ無理に移行する必要はありません。
 
 まだ **Experimental** 段階ですが、依存関係が理由で、 UUID の標準ライブラリへの移行が必要になる場合もあります。
 一方で、依存関係によって移行が難しい場合もあります。特にまだ Kotlin Uuid に対応していないライブラリに依存している場合、サードパーティの UUID を引き続き使用する必要があるため、移行に制約が生じることがあります。
