@@ -76,7 +76,7 @@ kotlinx.serialization.SerializationException: Serializer for class 'User' is not
 ### Kable
 また直接アプリケーションで UUID を利用していなくても、間接的に UUID を利用しているケースにおいて、この組み合わせを考慮する必要が生じます。
 
-例えば、Kotlin Multiplatform Bluetooth Low Energy のライブラリ Kable はサードパーティの UUID ライブラリに依存しています。そのため、 kotlinx-serialization-json を 1.7.2 に更新する際に UUID の依存関係が競合し、 Runtime Exception が発生します。
+例えば、Kotlin Multiplatform Bluetooth Low Energy のライブラリ Kable はサードパーティの UUID ライブラリに依存しています。そのため、 kotlinx-serialization-json を 1.7.2 に更新する際に UUID の依存関係が競合し、同様の問題が発生する可能性があります。
 
 Kable の Kotlin Uuid の対応は 0.36.0 のマイルストーンで計画しています。
 
