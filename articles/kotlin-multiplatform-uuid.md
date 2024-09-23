@@ -29,28 +29,8 @@ GitHub で現時点で一番スター数が多いのは下記のライブラリ�
 
 https://github.com/benasher44/uuid
 
-## これから
+## Migration
 Kotlin 2.0.20 以降であれば、これまでサードパーティに依存していた部分を標準ライブラリに置き換えることが可能になります。
-
-まだ **Experimental** の段階でも積極的に置き換えを進める動機として、他の依存関係が理由になることがあります。
-
-### kotlinx-serialization-json
-kotlinx-serialization-json はすでに 1.7.2 から Kotlin Uuid を採用しており、以降のバージョンを利用する際にサードパーティの UUID を併用していると Runtime Exception が発生します。
-
-https://github.com/Kotlin/kotlinx.serialization/releases/tag/v1.7.2
-
-https://github.com/Kotlin/kotlinx.serialization/pull/2744
-
-### Kable
-また直接自身のアプリで UUID を利用していなくても間接的に UUID を利用しているケースにおいてもこの組み合わせを考慮する必要があります。
-
-例えば、Kotlin Multiplatform Bluetooth Low Enagy のライブラリ Kable はサードパーティの UUID ライブラリに依存しています。そのため、 kotlinx-serialization-json を先に 1.7.2 に上げることはできなかったりします。
-
-Kable の Kotlin Uuid の対応は 0.36.0 で予定しています。
-
-https://github.com/JuulLabs/kable/pull/758
-
-### Migration
 以下は com.benasher44.uuid から kotlin.uuid への migration の一例です。
 
 ```diff
@@ -109,3 +89,23 @@ Generate
 - val uuid = uuid4().toString()
 + val uuid = Uuid.random().toString()
 ```
+
+## 移行への注意点
+まだ **Experimental** の段階でも積極的に置き換えを進める動機として、他の依存関係が理由になることがあります。
+
+### kotlinx-serialization-json
+kotlinx-serialization-json はすでに 1.7.2 から Kotlin Uuid を採用しており、以降のバージョンを利用する際にサードパーティの UUID を併用していると Runtime Exception が発生します。
+
+https://github.com/Kotlin/kotlinx.serialization/releases/tag/v1.7.2
+
+https://github.com/Kotlin/kotlinx.serialization/pull/2744
+
+### Kable
+また直接自身のアプリで UUID を利用していなくても間接的に UUID を利用しているケースにおいてもこの組み合わせを考慮する必要があります。
+
+例えば、Kotlin Multiplatform Bluetooth Low Energy のライブラリ Kable はサードパーティの UUID ライブラリに依存しています。そのため、 kotlinx-serialization-json を先に 1.7.2 に上げることはできなかったりします。
+
+Kable の Kotlin Uuid の対応は 0.36.0 のマイルストーンで計画しています。
+
+https://github.com/JuulLabs/kable/pull/758
+
