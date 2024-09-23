@@ -28,9 +28,31 @@ GitHub で現時点で一番スター数が多いのは次のライブラリで�
 
 https://github.com/benasher44/uuid
 
-## Migration
+## 移行への注意点
 Kotlin 2.0.20 以降であれば、これまでサードパーティに依存していた部分を標準ライブラリに置き換えることが可能になります。
-以下は com.benasher44.uuid から kotlin.uuid への migration の一例です。（後述の Kabel の PR からの抜粋です）
+
+まだ **Experimental** 段階ですが、依存関係が理由で、 UUID の標準ライブラリへの移行が必要になる場合もあります。
+一方で、依存関係によって移行が難しい場合もあります。
+以下は、ライブラリと UUID の依存関係における事例の紹介です。
+
+### kotlinx-serialization-json
+kotlinx-serialization-json はすでに 1.7.2 から Kotlin Uuid を採用しており、以降のバージョンを利用する際にサードパーティの UUID を併用していると Runtime Exception が発生します。
+
+https://github.com/Kotlin/kotlinx.serialization/releases/tag/v1.7.2
+
+https://github.com/Kotlin/kotlinx.serialization/pull/2744
+
+### Kable
+また直接アプリケーションで UUID を利用していなくても、間接的に UUID を利用しているケースにおいて、この組み合わせを考慮する必要が生じます。
+
+例えば、Kotlin Multiplatform Bluetooth Low Energy のライブラリ Kable はサードパーティの UUID ライブラリに依存しています。そのため、 kotlinx-serialization-json を 1.7.2 に更新する際に UUID の依存関係が競合し、 Runtime Exception が発生します。
+
+Kable の Kotlin Uuid の対応は 0.36.0 のマイルストーンで計画しています。
+
+https://github.com/JuulLabs/kable/pull/758
+
+## Migration
+以下は com.benasher44.uuid から kotlin.uuid への migration の一例です。（前述の Kabel の PR からの抜粋です。コンテキストを深く知りたい場合は、PR を参照ください）
 
 ### parse
 文字列から Uuid を生成します。
@@ -101,29 +123,6 @@ UUID v4 の生成ということで単純に置き換えています。
 > The returned uuid conforms to the IETF variant (variant 2) and version 4
 
 https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.uuid/-uuid/random.html
-
-## 移行への注意点
-まだ **Experimental** 段階ですが、依存関係が理由で、 UUID の標準ライブラリへの移行を積極的に検討する場面もあります。
-一方で、依存関係によって移行が難しい場合もあります。
-以下は、ライブラリと UUID の依存関係における事例の紹介です。
-
-### kotlinx-serialization-json
-kotlinx-serialization-json はすでに 1.7.2 から Kotlin Uuid を採用しており、以降のバージョンを利用する際にサードパーティの UUID を併用していると Runtime Exception が発生します。
-
-https://github.com/Kotlin/kotlinx.serialization/releases/tag/v1.7.2
-
-https://github.com/Kotlin/kotlinx.serialization/pull/2744
-
-### Kable
-また直接アプリケーションで UUID を利用していなくても、間接的に UUID を利用しているケースにおいて、この組み合わせを考慮する必要が生じます。
-
-例えば、Kotlin Multiplatform Bluetooth Low Energy のライブラリ Kable はサードパーティの UUID ライブラリに依存しています。そのため、 kotlinx-serialization-json を 1.7.2 に更新する際に UUID の依存関係が競合し、 Runtime Exception が発生します。
-
-Kable の Kotlin Uuid の対応は 0.36.0 のマイルストーンで計画しています。
-
-https://github.com/JuulLabs/kable/pull/758
-
-この PR から前述の Migration は抜粋していて、コンテキストについて深く知りたい場合は参照ください。
 
 ## まとめ
 UUID は広く普及しているため、アプリケーションで直接的に、または間接的に利用されることが多くあります。そのため、標準ライブラリへの切り替えは、他の依存関係との兼ね合いも考慮して計画する必要があります。
