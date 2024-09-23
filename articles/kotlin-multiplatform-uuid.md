@@ -37,11 +37,41 @@ Kotlin 2.0.20 以降であれば、これまでサードパーティに依存し
 以下は、ライブラリと UUID の依存関係における事例の紹介です。
 
 ### kotlinx-serialization-json
-kotlinx-serialization-json はすでに 1.7.2 から Kotlin Uuid を採用しており、以降のバージョンを利用する際にサードパーティの UUID を併用していると Runtime Exception が発生します。
+kotlinx-serialization-json はすでに 1.7.2 から Kotlin Uuid を採用しており、以降のバージョンを利用する際にサードパーティの UUID を併用していると Runtime Exception が発生するケースがあります。
 
 https://github.com/Kotlin/kotlinx.serialization/releases/tag/v1.7.2
 
 https://github.com/Kotlin/kotlinx.serialization/pull/2744
+
+例えば、次のようにサードパーティを利用した UUID を Serialize するクラスを定義しているとします。
+
+```kotlin
+import com.benasher44.uuid.Uuid
+import kotlinx.serialization.Serializable
+
+@Serializable data class User(val uuid: Uuid)
+```
+
+この User オブジェクトを ecode しようとすると iOS/Android 上で実行時に Exception が throw されます。
+
+```kotlin
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
+
+val jsonStirng = Json.encodeToString(user)
+```
+
+#### iOS
+
+```
+kotlin.native.internal.IrLinkageError: Reference to class 'Uuid' can not be evaluated: No class found for symbol 'kotlin.uuid/Uuid|null[0]'
+```
+
+#### Android
+
+```
+kotlinx.serialization.SerializationException: Serializer for class 'User' is not found.
+```
 
 ### Kable
 また直接アプリケーションで UUID を利用していなくても、間接的に UUID を利用しているケースにおいて、この組み合わせを考慮する必要が生じます。
