@@ -58,7 +58,7 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 
-val jsonStirng = Json.encodeToString(user)
+val jsonString = Json.encodeToString(user)
 ```
 
 #### iOS
@@ -72,6 +72,8 @@ kotlin.native.internal.IrLinkageError: Reference to class 'Uuid' can not be eval
 ```
 kotlinx.serialization.SerializationException: Serializer for class 'User' is not found.
 ```
+
+このエラーを回避するには、 kotlinx-serialization-json 1.7.1 を利用し続けるか、サードパーティの UUID から標準ライブラリに切り替える必要があります。
 
 ### Kable
 また直接アプリケーションで UUID を利用していなくても、間接的に UUID を利用しているケースにおいて、この組み合わせを考慮する必要が生じます。
