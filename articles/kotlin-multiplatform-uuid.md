@@ -72,7 +72,7 @@ kotlin.native.internal.IrLinkageError: Reference to class 'Uuid' can not be eval
 kotlinx.serialization.SerializationException: Serializer for class 'User' is not found.
 ```
 
-このエラーは、 kotlinx-serialization-json 1.7.2 以降が標準ライブラリの kotlin.uuid に依存しているにもかかわらず、サードパーティの benasher44/uuid を使用しているため、 kotlinx-serialization-json 側で koltin.uuid/Uuid のクラス解決ができないことが原因です。
+このエラーは、 kotlinx-serialization-json 1.7.2 以降で標準ライブラリの kotlin.uuid に依存しているにもかかわらず、サードパーティの benasher44/uuid を使用しているため、 kotlinx-serialization-json 側で koltin.uuid/Uuid のクラス解決ができないことが原因です。
 このエラーを回避するには、引き続き kotlinx-serialization-json 1.7.1 を使用するか、サードパーティの UUID を標準ライブラリに切り替える必要があります。
 
 このエラーを再現可能なサンプルコードのリポジトリを用意したので手元でビルドして確認することもできます。
@@ -87,6 +87,19 @@ https://github.com/ykws/uuid-runtime-exception-sample
 Kable の Kotlin Uuid の対応は 0.36.0 のマイルストーンで計画しています。
 
 https://github.com/JuulLabs/kable/pull/758
+
+### SKIE
+ライブラリが Kotlin 2.0.20 に対応していないために上げれないケースもあります。
+
+例えば、 Swift から Kotlin のコードを扱いやすくするライブラリ SKIE は現時点ではまだ Kotlin 2.0.20 に対応していません。
+
+https://github.com/touchlab/SKIE/issues/95
+
+Kotlin 2.0.20 の対応は 0.9.0 のマイルストーンで計画しています。
+
+対応を急ぐ場合、 0.9.0-RC.3 以降であれば、先行して Kotlin 2.0.20 に対応していて Kotlin Uuid への切り替えの実績もあります。 Slack の curcuit が導入しています。
+
+https://github.com/slackhq/circuit/pull/1605
 
 ## Migration
 以下は com.benasher44.uuid から kotlin.uuid への migration の一例です。（前述の Kabel の PR からの抜粋です。コンテキストを深く知りたい場合は、PR を参照ください）
