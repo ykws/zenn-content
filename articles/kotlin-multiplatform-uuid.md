@@ -3,7 +3,8 @@ title: "Kotlin の標準ライブラリで UUID が使えるようになりま�
 emoji: "🔑"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [kotlin]
-published: false
+published: true
+publication_name: yumemi_inc
 ---
 
 Kotlin 2.0.20 からついに Kotlin の標準ライブラリとして UUID が使えるようになりました。
