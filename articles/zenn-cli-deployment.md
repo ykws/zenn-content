@@ -15,7 +15,7 @@ published: true
 
 | Name | Version |
 | ---- | ------- |
-| zenn-cli | v0.1.155 |
+| zenn-cli | v0.1.157 |
 | macOS | 14.6.1 |
 | node | v22.6.0 |
 | npm/npx | 10.8.3 |
@@ -29,6 +29,12 @@ published: true
 5. ローカルリポジトリの Zenn 用セットアップ
 6. Zenn CLI で記事を作成
 7. GitHub リポジトリを更新
+
+## Issues
+
+zenn-cli v0.1.157 では DeprecationWarning が発生します。 zenn-cli が依存している markdown-it が原因で v14 以降で解消される見込みです。
+
+https://github.com/zenn-dev/zenn-editor/issues/476
 
 ## コンテンツ管理
 次のリポジトリで Zenn コンテンツを管理しています。
