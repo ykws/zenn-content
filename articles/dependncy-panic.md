@@ -113,7 +113,7 @@ DING_MODE()'
 Xcode 16 がリリースされたので、早速利用しようと思ったところ、 Kotlin 2.0.20 が Xcode 16 に未対応のため、 Xcode 15 を利用し続ける必要がありました[^KT-69093]。
 この問題は Kotlin 2.0.21-RC で対応されています[^kotlin-2-0-21-rc]。
 
-![](/images/kotlin-2.0.21-rc.png)
+![](/images/kotlin-2.0.21-rc.png =320x)
 *Kotlin 2.0.21-RC Release Note*
 
 Release Candidate でも Kotlin のバージョンを上げることができれば解消可能なのです。しかし、ここでもサードパーティのライブラリ SKIE の Kotlin への追従が対応へのブロック要因になっています[^skie-xcode-16]。後述しますが、この問題は workaround で回避できることが確認できました。
