@@ -137,7 +137,7 @@ Release Candidate でも Kotlin のバージョンを上げることができれ
 3. Report - Issue を作成する
 4. Fix    - Issue に対応する
 
-Issues がオープンでなくても、あるいは併用して、 Slack など課題を共有、管理できるツールが提供されている[^jetbrains-comuunity]こともあり、適宜読み替えてください。
+Issues がオープンでなくても、あるいは併用して、 Slack など課題を共有、管理できるツールが提供されている[^jjetbrains-comuunity]こともあり、適宜読み替えてください。
 
 [^jetbrains-community]: JetBrains が公開している参加可能な Community として、 Slack, X, Kotlin Blog, Reddit, StackOverflow, YouTube, Talking Kotlin, LinkedIn, Issue Tracker があります。 https://kotlinlang.org/community/
 
