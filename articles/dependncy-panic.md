@@ -72,7 +72,7 @@ kotlin.native.internal.IrLinkageError: Reference to class 'Uuid' can not be eval
 `Serializer` が `User` class をみつけることができませんでした。
 
 ```kotlin
-kotlinx.serialization.SerializationException: Serializer for class 'User' is not found.
+kotlinx.serialization.SerializationException: Serializer for class 'User' is not fo
 ```
 
 kotlinx-serialization-json は 1.7.2 から標準ライブラリの **kotlin.uuid/Uuid** に依存します。しかし、アプリ内部では依然としてサードパーティのライブラリが使用されていたため、 kotlinx-serialization-json 側で標準ライブラリのクラス解決ができなくなっていました。これが問題の原因です。
