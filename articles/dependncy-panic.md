@@ -111,15 +111,14 @@ DING_MODE()'
 ### Case 2
 
 Xcode 16 がリリースされたので、早速利用しようと思ったところ、 Kotlin 2.0.20 が Xcode 16 に未対応のため、 Xcode 15 を利用し続ける必要がありました[^KT-69093]。
-この問題は Kotlin 2.0.21-RC で対応されています[^kotlin-2-0-21-rc]。
+この問題は Kotlin 2.0.21-RC で対応されています。
 
-![](/images/kotlin-2.0.21-rc.png =320x)
-*Kotlin 2.0.21-RC Release Note*
+https://github.com/JetBrains/kotlin/releases/tag/v2.0.21-RC
 
 Release Candidate でも Kotlin のバージョンを上げることができれば解消可能なのです。しかし、ここでもサードパーティのライブラリ SKIE の Kotlin への追従が対応へのブロック要因になっています[^skie-xcode-16]。後述しますが、この問題は workaround で回避できることが確認できました。
 
 [^KT-69093]: JetBrains YouTrack - Issues: Xcode 16 support in Kotlin https://youtrack.jetbrains.com/issue/KT-69093
-[^kotlin-2-0-21-rc]: https://github.com/JetBrains/kotlin/releases/tag/v2.0.21-RC
+[^kotlin-2-0-21-rc]: 
 [^skie-xcode-16]: touchlab / SKIE - Issues: Xcode 16 support https://github.com/touchlab/SKIE/issues/115
 
 ## 依存関係との向き合い方
