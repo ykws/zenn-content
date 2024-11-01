@@ -3,7 +3,8 @@ title: "依存関係とどう向き合っていくか"
 emoji: "✨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [kotlin,kotlinmultiplatfor]
-published: false
+published: true
+publication_name: yumemi_inc
 ---
 
 > プロジェクトはゆっくりと、そして容赦なく、手に負えないものとなっていくのです。ソフトウェアにおける惨事のほとんどは、たいていのプロジェクトでは気づかずに通り過ぎてしまうような、気づくには小さすぎるとも思えるものから始まるのです。[^pragmatic-programmer]
