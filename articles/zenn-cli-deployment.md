@@ -32,7 +32,12 @@ published: true
 
 ## Issues
 
-zenn-cli v0.1.157 では DeprecationWarning が発生します。 zenn-cli が依存している markdown-it が原因で v14 以降で解消される見込みです。
+zenn-cli v0.1.157 - v0.1.158（それ以前のバージョンでも発生するかも）では DeprecationWarning が発生します。 zenn-cli が依存している markdown-it が原因で v14 以降で解消される見込みです。
+
+```
+(node:30404) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+```
 
 https://github.com/zenn-dev/zenn-editor/issues/476
 
