@@ -18,7 +18,7 @@ published: true
 | zenn-cli | v0.1.158 |
 | macOS | 15.1 |
 | node | v22.9.0 |
-| npm/npx | 10.9.1 |
+| npm/npx | 11.0.0 |
 
 # 手順
 
