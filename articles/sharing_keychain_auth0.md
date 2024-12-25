@@ -1,9 +1,9 @@
 ---
-title: "Sharing accessToken between App and Widget with Auth0"
+title: "iOS Widget と Auth0 の連携"
 emoji: "🔐"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [ios,swift,auth0]
-published: false
+published: true
 ---
 
 iOS アプリで Auth0 の認証機構を利用して Widget と Keychain による認証情報の共有の仕方を解説します。
@@ -15,23 +15,30 @@ iOS アプリに Auth0 を組み込む部分は iOS QuickStart が用意され�
 
 https://auth0.com/docs/quickstart/native/ios-swift/interactive
 
-1. Auth0 Quick Start iOS を選択して Sample をダウンロードする
+:::details サンプルアプリ確認手順
+以下は、サンプルアプリで Auth0 の認証を確認した備忘録です。
+
+1. Quick Start iOS を選択して Sample をダウンロードする
 2. Signing 自分の ADP に合わせて Team ID と BundleID を変える
 3. Capability から Associated Domains を設定する必要があるがダウンロード版は最初から設定済み
-4. Auth0 の Settins で Allowed Callback URLs, Allowed Logout URLs をコピペして BUNDLE_ID を変更して登録する
+4. Auth0 の Settings で Allowed Callback URLs, Allowed Logout URLs をコピペして BUNDLE_ID を変更して登録する
 5. Advanced Settigns で Team ID と App ID を設定する
 6. アプリをビルドしてインストール
-7. アプリを起動してLogin
+7. アプリを起動して Login
 8. Google Signin
 9. ログインできることを確認
 10. ログアウトできることを確認
+:::
 
-Auth0 には認証情報の管理するヘルパークラスとして CredentialsManager を用意しています。
-CredentialsManager は Keychain を扱い、 Keychain を簡易に扱えるように SimpleKeychain も用意しています。
+Auth0 には認証情報の管理するヘルパークラスとして **CredentialsManager** を用意しています。
 
-Refresh Token を有効にするには、 scope に `offline_access` を含めてリクエストする必要があります。
+https://auth0.github.io/Auth0.swift/documentation/auth0/credentialsmanager/
 
-サンプルと同じように動かすには `profile email` も必要。
+CredentialsManager は Keychain を扱い、 Keychain を簡易に扱えるように **SimpleKeychain** も用意しています。
+
+https://auth0.github.io/Auth0.swift/documentation/auth0/simplekeychain
+
+Refresh Token を有効にするには、 scope に `offline_access` を含めてリクエストする必要があります。サンプルと同じように動かすには `profile email` も必要。
 
 アプリと Widget で Keychain を共有するためにはグループの設定が必要です。
 
@@ -49,4 +56,3 @@ service は default で `Bundle.main.bundleIdentifier` が指定されており�
 accessGroup は Keychain Group の値を設定します。 Team ID の prefix も必要です。
 
 この設定によって、アプリでログインして Keychain に保存したログイン情報を Widget からも参照することができるようになります。
-
