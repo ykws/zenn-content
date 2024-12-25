@@ -2,7 +2,7 @@
 title: "Realm v4 から 10 に更新しました"
 emoji: "🏆"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [contest2024, android]
+topics: [contest2024, realm, android]
 published: true
 ---
 
