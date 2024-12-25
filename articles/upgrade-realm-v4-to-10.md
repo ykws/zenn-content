@@ -6,7 +6,7 @@ topics: [contest2024, realm, android]
 published: true
 ---
 
-2024年 **「今年の最も大きなチャレンジ」** は、とある Android アプリを 4年越しに **Realm v4** から **10** に Upgrade したことです。
+2024年 **「今年の最も大きなチャレンジ」** は、とある Android アプリの **Realm v4** から **10** に Upgrade したことです。
 
 正確には **v4.2.0** で、リリースは **2017年11月17日** でした。
 
@@ -24,7 +24,7 @@ API Level 34 の minimum AGP version は 8.1.1 です。
 
 https://developer.android.com/studio/releases#api-level-support
 
-該当アプリでは Gradle **7.4.0** で、 **8系**にアップデートするには、 Realm を **10.15.1** にアップデートする必要がありました
+該当アプリでは Gradle **7.4.0** で、 **8系**にアップデートするには、 Realm を **10.15.1** にアップデートする必要がありました。
 
 > This should be fixed with 10.15.1 which was just released. update your realm classpath in build.gradle to be :
 
