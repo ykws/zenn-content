@@ -20,7 +20,9 @@ https://github.com/realm/realm-java/releases/tag/v4.2.0
 
 https://support.google.com/googleplay/android-developer/answer/11926878
 
-API Level 34 の minimum AGP version は 8.1.1 です。
+API Level 34 の minimum AGP version は **8.1.1** です。
+
+![](https://storage.googleapis.com/zenn-user-upload/44116bdb1e3e-20241226.png)
 
 https://developer.android.com/studio/releases#api-level-support
 
