@@ -3,7 +3,7 @@ title: "swift-java 環境構築"
 emoji: "🌱"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [swift,java]
-published: false
+published: true
 ---
 
 Apple から Swift と Java を相互運用するためのライブラリ swift-java が公開されました。この記事では、リポジトリのサンプルを動かすための環境構築について説明します。
