@@ -10,15 +10,17 @@ Apple から Swift と Java を相互運用するためのライブラリ swift-
 
 https://github.com/swiftlang/swift-java
 
-Swift と Java の相互運用なので Swift と Java Development Kit（以下、JDK）の環境がそれぞれ必要になります。相互運用の手段がいくつか用意されていて、その手段ごとに必要とする JDK のバージョンが異なるため、 JDK のバージョン管理ツールとして SDKMAN! の導入を推奨します。Swift は、最新版の Xcode 16.4 に同梱される 6.1.2 で十分です。一時期は Swift 6.2 Development Snapshots を要求されていましたが、現時点では swift-java に既知の課題があって、6.2 をサポートできるまでは、それよりも前のバージョンの Swift が推奨されています。
-
-https://github.com/swiftlang/swift-java/pull/266
+Swift と Java の相互運用なので Swift と Java Development Kit（以下、JDK）の環境がそれぞれ必要になります。相互運用の手段がいくつか用意されていて、その手段ごとに必要とする JDK のバージョンが異なります。
 
 | | JDK | Swift |
 | - | - | - |
 | JavaKit | 17+ | 6.0.x |
 | swift-java jextract --mode=ffm | 24+ | 6.1 |
 | swift-java jextract --mode=jni | 7+ | 6.1 |
+
+そのため、 JDK のバージョン管理ツールとして SDKMAN! の導入を推奨します。Swift は、最新版の Xcode 16.4 に同梱される 6.1.2 で十分です。一時期は Swift 6.2 Development Snapshots を要求されていましたが、現時点では swift-java に既知の課題があって、6.2 をサポートできるまでは、それよりも前のバージョンの Swift が推奨されています。
+
+https://github.com/swiftlang/swift-java/pull/266
 
 ## Java 環境構築
 
