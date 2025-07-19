@@ -42,6 +42,7 @@ curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 ```
 
+### JDK 17
 JDK 17 をインストールします。JDK は様々な Distribution が用意されています[^java-distribution]。
 
 [^java-distribution]: Java には、他の言語、プラットフォームにも見られる長期保守のリリース（以下、LTS）とそうではないリリース（非LTS）が存在します。一時期 swift-java では JDK 22 が要求されていた際に、JDK 22 は非LTSだったこともあり、唯一 Oracle だけが提供していることがありました。そのため、筆者の環境では Oracle の Distribution を選択しています。JDK 22 以外であれば、Oracle 以外からも提供されています。
@@ -65,6 +66,7 @@ Java(TM) SE Runtime Environment (build 17.0.12+8-LTS-286)
 Java HotSpot(TM) 64-Bit Server VM (build 17.0.12+8-LTS-286, mixed mode, sharing)
 ```
 
+### JDK 24
 JDK 24 を使う場合は、次のように切り替えます。
 
 ```
@@ -72,6 +74,7 @@ sdk install java 24-oracle
 sdk use java 24-oracle
 ```
 
+### JDK 8
 :::message
 SDKMAN! では JDK 7 は提供がありません。Zulu から JDK 8 が提供されているのでこちらを利用するのが 7+ 以上の要求に対するミニマムバージョンになります。なお Amazon から提供されている JDK 8 ではサンプルを実行できませんでした。
 :::
