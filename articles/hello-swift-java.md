@@ -34,7 +34,9 @@ curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 ```
 
-JDK 17 をインストールします。JDK は様々な Distribution が用意されています。Java には、他の言語、プラットフォームにも見られる長期保守のリリース（以下、LTS）とそうではないリリース（非LTS）が存在します。一時期 swift-java では JDK 22 が要求されていた際に、JDK 22 は非LTSだったこともあり、唯一 Oracle だけが提供していることがありました。そのため、筆者の環境では Oracle の Distribution を選択しています。JDK 22 以外であれば、Oracle 以外からも提供されています。
+JDK 17 をインストールします。JDK は様々な Distribution が用意されています[^java-distribution]。
+
+[^java-distribution]: Java には、他の言語、プラットフォームにも見られる長期保守のリリース（以下、LTS）とそうではないリリース（非LTS）が存在します。一時期 swift-java では JDK 22 が要求されていた際に、JDK 22 は非LTSだったこともあり、唯一 Oracle だけが提供していることがありました。そのため、筆者の環境では Oracle の Distribution を選択しています。JDK 22 以外であれば、Oracle 以外からも提供されています。
 
 ```
 sdk install java 17.0.12-oracle
