@@ -72,14 +72,16 @@ sdk install java 24-oracle
 sdk use java 24-oracle
 ```
 
-JDK 8 を使う場合は、次のように切り替えます[^jdk-8]。
+:::message
+SDKMAN! では JDK 7 は提供がありません。Zulu から JDK 8 が提供されているのでこちらを利用するのが 7+ 以上の要求に対するミニマムバージョンになります。なお Amazon から提供されている JDK 8 ではサンプルを実行できませんでした。
+:::
+
+JDK 8 を使う場合は、次のように切り替えます。
 
 ```
 sdk install java 8.0.442-zulu
 sdk use java 8.0.442-zulu
 ```
-
-[^jdk-8]: SDKMAN! では JDK 7 は提供がありません。Zulu から JDK 8 が提供されているのでこちらを利用するのが 7+ 以上の要求に対するミニマムバージョンになります。なお Amazon から提供されている JDK 8 ではサンプルを実行できませんでした。
 
 ## Swift 環境構築
 swift-java に関しては macOS に限定されないため、他の環境向けに Swift をインストールすることでも相互運用可能です。
