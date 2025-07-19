@@ -14,6 +14,12 @@ Swift と Java の相互運用なので Swift と Java Development Kit（以下�
 
 https://github.com/swiftlang/swift-java/pull/266
 
+| | JDK | Swift |
+| - | - | - |
+| JavaKit | 17+ | 6.0.x |
+| swift-java jextract --mode=ffm | 24+ | 6.1 |
+| swift-java jextract --mode=jni | 7+ | 6.1 |
+
 ## Java 環境構築
 
 Java 環境構築のために SDKMAN! を導入します。
