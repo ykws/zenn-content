@@ -11,7 +11,11 @@ GitHub Actions で Node 20 を利用していると次のような警告が表�
 
 > Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/setup-java@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
 
-Node 20 は **2026年4月30日** に EOL を迎えました。以下は各バージョンの生存期間の一覧です。
+例えば上記警告に関しては Node 20 で動作する `actions/setup-java@v4` を利用していることが原因であることを伝えてくれています。
+
+Node 20 は **2026年4月30日** に EOL を迎えました。現在は猶予期間として Node 20 でも動作しています。明確な時期はまだ明示されていませんが、いずれ Node 20 は完全に削除される予定のため、Node 24 への移行を推奨しています。
+
+以下は各バージョンの生存期間の一覧です。GitHub 上で利用できなくなる時期とは必ずしも一致しません。
 
 https://github.com/nodejs/Release/#end-of-life-releases
 
