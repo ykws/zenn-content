@@ -3,7 +3,8 @@ title: "GitHub Actions Node 24 対応状況"
 emoji: "👷"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [githubactions, nodejs, security]
-published: false
+published: true
+publication_name: yumemi_inc
 ---
 
 # はじめに
