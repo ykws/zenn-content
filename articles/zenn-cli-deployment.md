@@ -15,10 +15,10 @@ published: true
 
 | Name | Version |
 | ---- | ------- |
-| zenn-cli | v0.1.159 |
-| macOS | 15.4.1 |
-| node | v22.9.0 |
-| npm/npx | 11.0.0 |
+| zenn-cli | v0.5.2 |
+| macOS | 26.5 |
+| node | v26.3.0 |
+| npm/npx | 12.0.1 |
 
 # 手順
 
