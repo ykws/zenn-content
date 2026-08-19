@@ -40,15 +40,15 @@ https://github.com/actions/runner/releases/tag/v2.327.1
 | upload-artifact | v6.0.0 | https://github.com/actions/upload-artifact/releases/tag/v6.0.0 | https://github.com/actions/upload-artifact/pull/719 |
 | setup-node | v5.0.0 | https://github.com/actions/setup-node/releases/tag/v5.0.0 | https://github.com/actions/setup-node/pull/1325 |
 | setup-java | v5.0.0 | https://github.com/actions/setup-java/releases/tag/v5.0.0 | https://github.com/actions/setup-java/pull/888 |
-| gradle-build-action[^1] | v5.0.0 | https://github.com/gradle/actions/releases/tag/v5.0.0 | https://github.com/gradle/actions/pull/721 |
+| gradle/actions[^1] | v5.0.0 | https://github.com/gradle/actions/releases/tag/v5.0.0 | https://github.com/gradle/actions/pull/721 |
 
-[^1]: gradle-build-action は `setup-gradle` `wrapper-validation` を内包するようになっています。
+[^1]: gradle/actions に `setup-gradle` や `wrapper-validation` が含まれており、これらを統合するリポジトリとなっています。
 
 # おわりに
-
-Node 24 の生存期間は **2028年4月30日**までです！
 
 Node 20 対応の記事を書いてから 2年半が経過していました。
 
 https://zenn.dev/yumemi_inc/articles/github-actions-node-20
+
+Node 24 の生存期間は **2028年4月30日**までです！
 
