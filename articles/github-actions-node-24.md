@@ -19,10 +19,6 @@ Node 20 は **2026年4月30日** に EOL を迎えました。現在は猶予期
 
 https://github.com/nodejs/Release/#end-of-life-releases
 
-Node 20 対応の記事を書いてから 2年半が経過していました。
-
-https://zenn.dev/yumemi_inc/articles/github-actions-node-20
-
 :::message alert
 セルフホストしている場合は、Node 24 に対応した **2.327.1** 以降の Runner を利用する必要があります。
 :::
@@ -51,4 +47,8 @@ https://github.com/actions/runner/releases/tag/v2.327.1
 # おわりに
 
 Node 24 の生存期間は **2028年4月30日**までです！
+
+Node 20 対応の記事を書いてから 2年半が経過していました。
+
+https://zenn.dev/yumemi_inc/articles/github-actions-node-20
 
