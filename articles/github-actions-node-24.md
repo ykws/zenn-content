@@ -31,7 +31,7 @@ https://github.com/actions/runner/releases/tag/v2.327.1
 筆者の利用しているモバイルアプリ関連の Actions が主になります
 :::
 
-各 Actions では Node 24 の対応が完了しています。以下はその対応状況です。これよりも新しいバージョンがリリースされているものもあります。
+各 Actions では Node 24 の対応が完了しています。以下はその対応済みバージョンの一覧です。表中のバージョンよりも新しいものがすでにリリースされている場合があります。
 
 | Actions | Version | Release Note | Pull Request |
 | -- | -- | -- | -- |
@@ -42,7 +42,7 @@ https://github.com/actions/runner/releases/tag/v2.327.1
 | setup-java | v5.0.0 | https://github.com/actions/setup-java/releases/tag/v5.0.0 | https://github.com/actions/setup-java/pull/888 |
 | gradle-build-action[^1] | v5.0.0 | https://github.com/gradle/actions/releases/tag/v5.0.0 | https://github.com/gradle/actions/pull/721 |
 
-[^1]: gradle-build-action は `setup-gradle` `wrapper-validation` を内容するようになっています。
+[^1]: gradle-build-action は `setup-gradle` `wrapper-validation` を内包するようになっています。
 
 # おわりに
 
