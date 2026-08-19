@@ -19,13 +19,19 @@ Node 20 対応の記事を書いてから 2年半が経過していました。
 
 https://zenn.dev/yumemi_inc/articles/github-actions-node-20
 
+:::message alert
+セルフホストしている場合は、Node 24 に対応した **2.327.1** 以降の Runner を利用する必要があります。
+:::
+
+https://github.com/actions/runner/releases/tag/v2.327.1
+
 # 対応状況
 
 :::message
-モバイルアプリ関連の Actions が主になります
+筆者の利用しているモバイルアプリ関連の Actions が主になります
 :::
 
-各 Actions では Node 24 の対応が進んでいます。以下はその対応状況です。
+各 Actions では Node 24 の対応が完了しています。以下はその対応状況です。これよりも新しいバージョンがリリースされているものもあります。
 
 | Actions | Version | Release Note | Pull Request |
 | -- | -- | -- | -- |
