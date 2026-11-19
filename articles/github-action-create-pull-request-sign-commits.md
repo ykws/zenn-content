@@ -31,7 +31,7 @@ sign-commits
 
 | before | after|
 | - | - |
-| ![](/images/github-actions-sign-commits-before.png) | ![](/images/github-actions-sign-commits-after.png) |
+| ![](/images/github-actions-sign-commits-unverified.png) | ![](/images/github-actions-sign-commits-verified.png) |
 
 # おわりに
 
