@@ -24,8 +24,6 @@ https://github.com/marketplace/actions/create-pull-request
 
 冒頭の Actions には、コミットに署名するオプションが用意されています。
 
-## sign-commits
-
 `sign-commits` を `true` にすることで `GITHUB_TOKEN` を使って `github-actions[bot]` のコミットに署名します。`token` のオプションを併用することでトークンの指定も可能です[^commit-signature-verification-for-bots]。
 
 ```yaml
@@ -37,13 +35,13 @@ https://github.com/marketplace/actions/create-pull-request
 
 [^commit-signature-verification-for-bots]: Commit signature verification for bots https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#commit-signature-verification-for-bots
 
-### sign-commits: false
+## sign-commits: false
 `sign-commits` は省略可能で、省略した場合はデフォルトの `false` が指定され、署名されません。そのため、GitHub のシステム上で bot のコミットが **Unverified** となります。
 
 ![Unverified commit](/images/github-actions-sign-commits-unverified.png)
 *Unverified commit*
 
-### sign-commits: true
+## sign-commits: true
 `sign-commits` に `true` を指定すると署名され、bot のコミットが **Verified** となります。
 
 ![Verified commit](/images/github-actions-sign-commits-verified.png)
