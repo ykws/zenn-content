@@ -3,7 +3,8 @@ title: "GitHub Actions のコミットに署名する"
 emoji: "🪪"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [githubactions]
-published: false
+published: true
+publication_name: yumemi_inc
 ---
 
 # はじめに
